@@ -1,0 +1,712 @@
+[0m[1mmodule.redis_enterprise.random_password.redis_admin[0]: Refreshing state... [id=none][0m
+[0m[1mmodule.redis_enterprise.tls_private_key.generated[0]: Refreshing state... [id=39fea6ce58a6d155f7ab0a6190122dcb33c21738][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].data.aws_availability_zones.available: Reading...[0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_vpc.main: Refreshing state... [id=vpc-0d43c31bdd130d61c][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].data.aws_availability_zones.available: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group.redis: Refreshing state... [id=sg-0a58023fa5da6b452][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_internet_gateway.main: Refreshing state... [id=igw-02b60c0573cdab800][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"]: Refreshing state... [id=subnet-026ee6c84045c7e34][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"]: Refreshing state... [id=subnet-0f758faecc1d75054][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0]: Refreshing state... [id=subnet-0106630a5ec8d1ad3][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1c"]: Refreshing state... [id=subnet-0378166623d4a75d7][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table.public: Refreshing state... [id=rtb-0c0e6c83d1e989d1e][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.egress: Refreshing state... [id=sgrule-3407993035][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.ssh: Refreshing state... [id=sgrule-2694578324][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.discovery: Refreshing state... [id=sgrule-3083085855][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.internal: Refreshing state... [id=sgrule-2469760565][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.database: Refreshing state... [id=sgrule-3413184527][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.metrics: Refreshing state... [id=sgrule-2947654827][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.rest_api: Refreshing state... [id=sgrule-747879410][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui: Refreshing state... [id=sgrule-3016074521][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"]: Refreshing state... [id=rtbassoc-022dd8357987d565d][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"]: Refreshing state... [id=rtbassoc-0d93b972e051930fd][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1c"]: Refreshing state... [id=rtbassoc-05d27e5f3652d4ff6][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0]: Refreshing state... [id=rtbassoc-0a6cf62a7dcba6507][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_key_pair.redis: Refreshing state... [id=redis-simple-us-east-1-key][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].data.aws_ami.ubuntu[0]: Reading...[0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role.redis: Refreshing state... [id=redis-simple-us-east-1-redis-role][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].data.aws_ami.ubuntu[0]: Read complete after 1s [id=ami-04680790a315cd58d][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role_policy.redis: Refreshing state... [id=redis-simple-us-east-1-redis-role:redis-simple-us-east-1-redis-policy][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_instance_profile.redis: Refreshing state... [id=redis-simple-us-east-1-redis-profile][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Refreshing state... [id=i-0cde69d1a3563427f][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Refreshing state... [id=i-00fe1d543be2dfeb7][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Refreshing state... [id=i-0307c67f2094e7e75][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Refreshing state... [id=8162110331707410210][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+[31m-[0m/[32m+[0m destroy and then create replacement[0m
+ [36m<=[0m read (data resources)[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.redis_enterprise.module.bastion[0].data.aws_ami.ubuntu[0][0m will be read during apply
+  # (depends on a resource or a module with changes pending)
+[0m [36m<=[0m[0m data "aws_ami" "ubuntu" {
+      [32m+[0m[0m architecture          = (known after apply)
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m block_device_mappings = (known after apply)
+      [32m+[0m[0m boot_mode             = (known after apply)
+      [32m+[0m[0m creation_date         = (known after apply)
+      [32m+[0m[0m deprecation_time      = (known after apply)
+      [32m+[0m[0m description           = (known after apply)
+      [32m+[0m[0m ena_support           = (known after apply)
+      [32m+[0m[0m hypervisor            = (known after apply)
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m image_id              = (known after apply)
+      [32m+[0m[0m image_location        = (known after apply)
+      [32m+[0m[0m image_owner_alias     = (known after apply)
+      [32m+[0m[0m image_type            = (known after apply)
+      [32m+[0m[0m imds_support          = (known after apply)
+      [32m+[0m[0m kernel_id             = (known after apply)
+      [32m+[0m[0m last_launched_time    = (known after apply)
+      [32m+[0m[0m most_recent           = true
+      [32m+[0m[0m name                  = (known after apply)
+      [32m+[0m[0m owner_id              = (known after apply)
+      [32m+[0m[0m owners                = [
+          [32m+[0m[0m "099720109477",
+        ]
+      [32m+[0m[0m platform              = (known after apply)
+      [32m+[0m[0m platform_details      = (known after apply)
+      [32m+[0m[0m product_codes         = (known after apply)
+      [32m+[0m[0m public                = (known after apply)
+      [32m+[0m[0m ramdisk_id            = (known after apply)
+      [32m+[0m[0m region                = (known after apply)
+      [32m+[0m[0m root_device_name      = (known after apply)
+      [32m+[0m[0m root_device_type      = (known after apply)
+      [32m+[0m[0m root_snapshot_id      = (known after apply)
+      [32m+[0m[0m sriov_net_support     = (known after apply)
+      [32m+[0m[0m state                 = (known after apply)
+      [32m+[0m[0m state_reason          = (known after apply)
+      [32m+[0m[0m tags                  = (known after apply)
+      [32m+[0m[0m tpm_support           = (known after apply)
+      [32m+[0m[0m usage_operation       = (known after apply)
+      [32m+[0m[0m virtualization_type   = (known after apply)
+
+      [32m+[0m[0m filter {
+          [32m+[0m[0m name   = "name"
+          [32m+[0m[0m values = [
+              [32m+[0m[0m "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*",
+            ]
+        }
+      [32m+[0m[0m filter {
+          [32m+[0m[0m name   = "virtualization-type"
+          [32m+[0m[0m values = [
+              [32m+[0m[0m "hvm",
+            ]
+        }
+    }
+
+[1m  # module.redis_enterprise.module.bastion[0].aws_eip.bastion[0m will be created
+[0m  [32m+[0m[0m resource "aws_eip" "bastion" {
+      [32m+[0m[0m allocation_id        = (known after apply)
+      [32m+[0m[0m arn                  = (known after apply)
+      [32m+[0m[0m association_id       = (known after apply)
+      [32m+[0m[0m carrier_ip           = (known after apply)
+      [32m+[0m[0m customer_owned_ip    = (known after apply)
+      [32m+[0m[0m domain               = "vpc"
+      [32m+[0m[0m id                   = (known after apply)
+      [32m+[0m[0m instance             = (known after apply)
+      [32m+[0m[0m ipam_pool_id         = (known after apply)
+      [32m+[0m[0m network_border_group = (known after apply)
+      [32m+[0m[0m network_interface    = (known after apply)
+      [32m+[0m[0m private_dns          = (known after apply)
+      [32m+[0m[0m private_ip           = (known after apply)
+      [32m+[0m[0m ptr_record           = (known after apply)
+      [32m+[0m[0m public_dns           = (known after apply)
+      [32m+[0m[0m public_ip            = (known after apply)
+      [32m+[0m[0m public_ipv4_pool     = (known after apply)
+      [32m+[0m[0m region               = "us-east-1"
+      [32m+[0m[0m tags                 = {
+          [32m+[0m[0m "ManagedBy" = "terraform"
+          [32m+[0m[0m "Module"    = "redis-enterprise-aws"
+          [32m+[0m[0m "Name"      = "redis-simple-bastion-eip"
+        }
+      [32m+[0m[0m tags_all             = {
+          [32m+[0m[0m "ManagedBy" = "terraform"
+          [32m+[0m[0m "Module"    = "redis-enterprise-aws"
+          [32m+[0m[0m "Name"      = "redis-simple-bastion-eip"
+        }
+    }
+
+[1m  # module.redis_enterprise.module.bastion[0].aws_eip_association.bastion[0m will be created
+[0m  [32m+[0m[0m resource "aws_eip_association" "bastion" {
+      [32m+[0m[0m allocation_id        = (known after apply)
+      [32m+[0m[0m id                   = (known after apply)
+      [32m+[0m[0m instance_id          = (known after apply)
+      [32m+[0m[0m network_interface_id = (known after apply)
+      [32m+[0m[0m private_ip_address   = (known after apply)
+      [32m+[0m[0m public_ip            = (known after apply)
+      [32m+[0m[0m region               = "us-east-1"
+    }
+
+[1m  # module.redis_enterprise.module.bastion[0].aws_instance.bastion[0m will be created
+[0m  [32m+[0m[0m resource "aws_instance" "bastion" {
+      [32m+[0m[0m ami                                  = (known after apply)
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m associate_public_ip_address          = true
+      [32m+[0m[0m availability_zone                    = (known after apply)
+      [32m+[0m[0m disable_api_stop                     = (known after apply)
+      [32m+[0m[0m disable_api_termination              = (known after apply)
+      [32m+[0m[0m ebs_optimized                        = (known after apply)
+      [32m+[0m[0m enable_primary_ipv6                  = (known after apply)
+      [32m+[0m[0m force_destroy                        = false
+      [32m+[0m[0m get_password_data                    = false
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_initiated_shutdown_behavior = (known after apply)
+      [32m+[0m[0m instance_lifecycle                   = (known after apply)
+      [32m+[0m[0m instance_state                       = (known after apply)
+      [32m+[0m[0m instance_type                        = "t3.medium"
+      [32m+[0m[0m ipv6_address_count                   = (known after apply)
+      [32m+[0m[0m ipv6_addresses                       = (known after apply)
+      [32m+[0m[0m key_name                             = "redis-simple-us-east-1-key"
+      [32m+[0m[0m monitoring                           = (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [32m+[0m[0m placement_group_id                   = (known after apply)
+      [32m+[0m[0m placement_partition_number           = (known after apply)
+      [32m+[0m[0m primary_network_interface_id         = (known after apply)
+      [32m+[0m[0m private_dns                          = (known after apply)
+      [32m+[0m[0m private_ip                           = (known after apply)
+      [32m+[0m[0m public_dns                           = (known after apply)
+      [32m+[0m[0m public_ip                            = (known after apply)
+      [32m+[0m[0m region                               = "us-east-1"
+      [32m+[0m[0m secondary_private_ips                = (known after apply)
+      [32m+[0m[0m security_groups                      = (known after apply)
+      [32m+[0m[0m source_dest_check                    = true
+      [32m+[0m[0m spot_instance_request_id             = (known after apply)
+      [32m+[0m[0m subnet_id                            = "subnet-0106630a5ec8d1ad3"
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "ManagedBy" = "terraform"
+          [32m+[0m[0m "Module"    = "redis-enterprise-aws"
+          [32m+[0m[0m "Name"      = "redis-simple-bastion"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "ManagedBy" = "terraform"
+          [32m+[0m[0m "Module"    = "redis-enterprise-aws"
+          [32m+[0m[0m "Name"      = "redis-simple-bastion"
+        }
+      [32m+[0m[0m tenancy                              = (known after apply)
+      [32m+[0m[0m user_data                            = <<-EOT
+            #!/bin/bash
+            # =============================================================================
+            # Bastion/Client Node Preparation Script
+            # Generated by terraform-aws-redis-enterprise module
+            # =============================================================================
+            
+            set -euo pipefail
+            exec > >(tee /var/log/bastion-install.log) 2>&1
+            
+            SSH_USER="ubuntu"
+            CLUSTER_FQDN="cluster.redis-simple.local"
+            MEMTIER_URL="https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.1.1.tar.gz"
+            PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v2.48.0/prometheus-2.48.0.linux-amd64.tar.gz"
+            GRAFANA_VERSION="10.2.2"
+            JAVA_VERSION="21"
+            
+            INSTALL_MEMTIER="true"
+            INSTALL_PROMETHEUS="true"
+            INSTALL_GRAFANA="true"
+            INSTALL_REDISINSIGHT="true"
+            INSTALL_REDIS_CLI="true"
+            
+            LOG_FILE="/home/${SSH_USER}/prepare_client.log"
+            INSTALL_DIR="/home/${SSH_USER}/install"
+            
+            log() {
+                echo "$(date -Is) - $1" | tee -a "$LOG_FILE"
+            }
+            
+            # Wait for user home
+            while [ ! -d "/home/${SSH_USER}" ]; do
+                echo "Waiting for /home/${SSH_USER}..."
+                sleep 5
+            done
+            
+            log "=== Starting bastion preparation ==="
+            
+            # =============================================================================
+            # Wait for cloud-init
+            # =============================================================================
+            log "Waiting for cloud-init..."
+            cloud-init status --wait || true
+            
+            while fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do
+                log "Waiting for apt lock..."
+                sleep 5
+            done
+            
+            # =============================================================================
+            # APT Configuration
+            # =============================================================================
+            export DEBIAN_FRONTEND=noninteractive
+            export NEEDRESTART_MODE=a
+            
+            if [ -d /etc/needrestart/conf.d ]; then
+                cat > /etc/needrestart/conf.d/99-disable-interactive.conf << 'EOF'
+            $nrconf{restart} = 'a';
+            $nrconf{kernelhints} = 0;
+            EOF
+            fi
+            
+            # =============================================================================
+            # System Packages
+            # =============================================================================
+            log "Installing system packages..."
+            apt-get -y update
+            apt-get -y install \
+                vim htop iputils-ping netcat-openbsd dnsutils curl wget \
+                jq openssl ca-certificates python3 python3-pip python3-venv \
+                openjdk-${JAVA_VERSION}-jdk build-essential autoconf automake \
+                libpcre3-dev libevent-dev pkg-config zlib1g-dev libssl-dev \
+                apt-transport-https software-properties-common gnupg
+            
+            mkdir -p "${INSTALL_DIR}"
+            cd "${INSTALL_DIR}"
+            
+            # =============================================================================
+            # Memtier Benchmark
+            # =============================================================================
+            if [ "${INSTALL_MEMTIER}" = "true" ]; then
+                log "Installing memtier_benchmark..."
+                wget -O memtier.tar.gz "${MEMTIER_URL}"
+                tar xfz memtier.tar.gz
+                mv memtier_benchmark-*/ memtier
+                pushd memtier
+                autoreconf -ivf
+                ./configure
+                make -j$(nproc)
+                make install
+                popd
+                log "memtier_benchmark installed"
+            fi
+            
+            # =============================================================================
+            # Redis CLI
+            # =============================================================================
+            if [ "${INSTALL_REDIS_CLI}" = "true" ]; then
+                log "Installing redis-cli..."
+                curl -fsSL https://packages.redis.io/gpg | gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+                chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+                echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" > /etc/apt/sources.list.d/redis.list
+                apt-get update
+                apt-get install -y redis-tools
+                systemctl stop redis-server 2>/dev/null || true
+                systemctl disable redis-server 2>/dev/null || true
+                log "redis-cli installed"
+            fi
+            
+            # =============================================================================
+            # Prometheus
+            # =============================================================================
+            if [ "${INSTALL_PROMETHEUS}" = "true" ]; then
+                log "Installing Prometheus..."
+                wget -O prometheus.tar.gz "${PROMETHEUS_URL}"
+                tar xfz prometheus.tar.gz
+                mv prometheus-*/ prometheus
+                
+                groupadd --system prometheus 2>/dev/null || true
+                useradd -s /sbin/nologin --system -g prometheus prometheus 2>/dev/null || true
+                mkdir -p /var/lib/prometheus /etc/prometheus/{rules,rules.d,files_sd}
+                
+                mv prometheus/prometheus prometheus/promtool /usr/local/bin/
+                mv prometheus/consoles/ prometheus/console_libraries/ /etc/prometheus/
+                
+                cat > /etc/prometheus/prometheus.yml << PROMCFG
+            global:
+              scrape_interval: 15s
+            rule_files:
+              - "rules/*.yml"
+            scrape_configs:
+              - job_name: "redis-enterprise"
+                scheme: https
+                tls_config:
+                  insecure_skip_verify: true
+                scrape_interval: 30s
+                metrics_path: /v2
+                static_configs:
+                  - targets: ['${CLUSTER_FQDN}:8070']
+                    labels:
+                      cluster: '${CLUSTER_FQDN}'
+            PROMCFG
+            
+                cat > /etc/systemd/system/prometheus.service << 'PROMSVC'
+            [Unit]
+            Description=Prometheus
+            Wants=network-online.target
+            After=network-online.target
+            
+            [Service]
+            User=prometheus
+            Group=prometheus
+            ExecStart=/usr/local/bin/prometheus \
+              --config.file=/etc/prometheus/prometheus.yml \
+              --storage.tsdb.path=/var/lib/prometheus \
+              --web.console.templates=/etc/prometheus/consoles \
+              --web.console.libraries=/etc/prometheus/console_libraries \
+              --web.listen-address=0.0.0.0:9090
+            Restart=always
+            
+            [Install]
+            WantedBy=multi-user.target
+            PROMSVC
+            
+                chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
+                systemctl daemon-reload
+                systemctl enable prometheus
+                systemctl start prometheus
+                log "Prometheus installed"
+            fi
+            
+            # =============================================================================
+            # Grafana
+            # =============================================================================
+            if [ "${INSTALL_GRAFANA}" = "true" ]; then
+                log "Installing Grafana..."
+                mkdir -p /etc/apt/keyrings/
+                wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor > /etc/apt/keyrings/grafana.gpg
+                echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" > /etc/apt/sources.list.d/grafana.list
+                apt-get -y update
+                apt-get install -y grafana-enterprise=${GRAFANA_VERSION}
+            
+                cat > /etc/grafana/provisioning/datasources/prometheus.yaml << 'GRAFDS'
+            apiVersion: 1
+            datasources:
+            - name: Prometheus
+              type: prometheus
+              access: proxy
+              url: http://127.0.0.1:9090
+              isDefault: true
+            GRAFDS
+            
+                systemctl enable grafana-server
+                systemctl start grafana-server
+                log "Grafana installed"
+            fi
+            
+            # =============================================================================
+            # Docker & RedisInsight
+            # =============================================================================
+            if [ "${INSTALL_REDISINSIGHT}" = "true" ]; then
+                log "Installing Docker and RedisInsight..."
+                install -m 0755 -d /etc/apt/keyrings
+                curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+                chmod a+r /etc/apt/keyrings/docker.asc
+                echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
+                apt-get update
+                apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+                usermod -aG docker ${SSH_USER}
+            
+                systemctl enable docker
+                systemctl start docker
+                sleep 5
+            
+                docker run -d --name redisinsight --restart unless-stopped \
+                    -p 0.0.0.0:5540:5540 -v redisinsight:/data redis/redisinsight:latest
+                log "RedisInsight container started"
+            fi
+            
+            # =============================================================================
+            # Cleanup and Summary
+            # =============================================================================
+            chown -R ${SSH_USER}:${SSH_USER} "${INSTALL_DIR}"
+            chown -R ${SSH_USER}:${SSH_USER} /home/${SSH_USER}
+            
+            log "=== Bastion preparation complete ==="
+            log "Services:"
+            log "  - Prometheus: http://localhost:9090"
+            log "  - Grafana: http://localhost:3000 (admin/admin)"
+            log "  - RedisInsight: http://localhost:5540"
+            log "Redis cluster: ${CLUSTER_FQDN}"
+            
+            touch /home/${SSH_USER}/bastion_ready
+            chown ${SSH_USER}:${SSH_USER} /home/${SSH_USER}/bastion_ready
+        EOT
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+      [32m+[0m[0m user_data_replace_on_change          = false
+      [32m+[0m[0m vpc_security_group_ids               = (known after apply)
+
+      [32m+[0m[0m root_block_device {
+          [32m+[0m[0m delete_on_termination = true
+          [32m+[0m[0m device_name           = (known after apply)
+          [32m+[0m[0m encrypted             = true
+          [32m+[0m[0m iops                  = (known after apply)
+          [32m+[0m[0m kms_key_id            = (known after apply)
+          [32m+[0m[0m tags                  = {
+              [32m+[0m[0m "ManagedBy" = "terraform"
+              [32m+[0m[0m "Module"    = "redis-enterprise-aws"
+              [32m+[0m[0m "Name"      = "redis-simple-bastion-root"
+            }
+          [32m+[0m[0m tags_all              = (known after apply)
+          [32m+[0m[0m throughput            = (known after apply)
+          [32m+[0m[0m volume_id             = (known after apply)
+          [32m+[0m[0m volume_size           = 50
+          [32m+[0m[0m volume_type           = "gp3"
+        }
+    }
+
+[1m  # module.redis_enterprise.module.bastion[0].aws_security_group.bastion[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "bastion" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Security group for bastion host"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "All outbound traffic"
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "Grafana"
+              [32m+[0m[0m from_port        = 3000
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 3000
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "Prometheus"
+              [32m+[0m[0m from_port        = 9090
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 9090
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "RedisInsight"
+              [32m+[0m[0m from_port        = 5540
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 5540
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "SSH access"
+              [32m+[0m[0m from_port        = 22
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 22
+            },
+        ]
+      [32m+[0m[0m name                   = "redis-simple-bastion-sg"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m region                 = "us-east-1"
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags                   = {
+          [32m+[0m[0m "ManagedBy" = "terraform"
+          [32m+[0m[0m "Module"    = "redis-enterprise-aws"
+          [32m+[0m[0m "Name"      = "redis-simple-bastion-sg"
+        }
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "ManagedBy" = "terraform"
+          [32m+[0m[0m "Module"    = "redis-enterprise-aws"
+          [32m+[0m[0m "Name"      = "redis-simple-bastion-sg"
+        }
+      [32m+[0m[0m vpc_id                 = "vpc-0d43c31bdd130d61c"
+    }
+
+[1m  # module.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0][0m is tainted, so must be [1m[31mreplaced[0m
+[0m[31m-[0m/[32m+[0m[0m resource "null_resource" "wait_for_cluster" {
+      [33m~[0m[0m id = "8162110331707410210" -> (known after apply)
+    }
+
+[1mPlan:[0m 5 to add, 0 to change, 1 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m admin_ui_urls       = {
+      [32m+[0m[0m us-east-1 = "https://35.175.202.12:8443"
+    }
+  [32m+[0m[0m bastion_ssh_command = (known after apply)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Destroying... [id=8162110331707410210][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Destruction complete after 0s[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Creating...[0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Provisioning with 'local-exec'...[0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mExecuting: ["/bin/sh" "-c" "echo \"Waiting for Redis Enterprise cluster to initialize...\"\nfor i in $(seq 1 60); do\n  if curl -sk https://35.175.202.12:9443/v1/bootstrap 2>/dev/null | grep -q '\"status\":\"completed\"'; then\n    echo \"Cluster is ready!\"\n    exit 0\n  fi\n  echo \"Waiting... ($i/60)\"\n  sleep 30\ndone\necho \"Warning: Timeout waiting for cluster, but continuing...\"\nexit 0\n"]
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting for Redis Enterprise cluster to initialize...
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (1/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (2/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [1m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (3/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [1m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [1m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [1m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (4/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [1m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [1m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [2m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (5/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [2m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [2m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [2m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (6/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [2m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [2m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [3m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (7/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [3m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [3m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [3m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (8/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [3m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [3m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [4m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (9/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [4m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [4m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [4m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (10/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [4m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [4m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [5m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (11/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [5m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [5m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [5m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (12/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [5m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [5m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [6m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (13/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [6m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [6m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [6m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (14/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [6m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [6m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [7m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (15/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [7m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [7m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [7m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (16/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [7m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [7m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [8m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (17/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [8m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [8m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [8m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (18/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [8m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [8m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [9m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (19/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [9m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [9m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [9m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (20/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [9m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [9m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [10m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (21/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [10m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [10m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [10m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (22/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [10m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [10m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [11m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (23/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [11m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [11m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [11m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (24/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [11m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [11m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [12m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (25/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [12m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [12m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [12m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (26/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [12m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [12m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [13m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (27/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [13m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [13m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [13m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (28/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [13m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [13m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [14m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (29/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [14m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [14m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [14m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (30/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [14m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [14m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [15m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (31/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [15m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [15m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [15m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (32/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [15m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [15m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [16m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (33/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [16m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [16m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [16m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (34/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [16m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [16m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [17m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (35/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [17m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [17m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [17m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (36/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [17m40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [17m50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [18m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (37/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [18m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [18m20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [18m30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0] (local-exec):[0m [0mWaiting... (38/60)
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Still creating... [18m40s elapsed][0m[0m

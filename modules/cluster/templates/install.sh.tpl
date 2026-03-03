@@ -52,8 +52,8 @@ $nrconf{kernelhints} = 0;
 EOF
 fi
 
-log "Waiting for cloud-init..."
-cloud-init status --wait || true
+# Note: We don't wait for cloud-init here since this script IS running as part of cloud-init (user_data)
+# Waiting would cause a deadlock
 
 log "Updating packages..."
 apt-get update -y >> /home/$${SSH_USER}/apt.log 2>&1
