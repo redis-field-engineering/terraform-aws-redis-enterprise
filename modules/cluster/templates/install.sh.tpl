@@ -128,40 +128,125 @@ EXTERNAL_IP=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.2
 echo "$${INTERNAL_IP} redis-node-$${NODE_INDEX}" >> /etc/hosts
 
 # =============================================================================
-# Create or Join Cluster
+# Create or Join Cluster using REST API
 # =============================================================================
-# Build optional arguments
-FLASH_OPT=""
-RACK_OPT=""
-%{ if flash_enabled ~}
-FLASH_OPT="flash_enabled"
-%{ endif ~}
-%{ if rack_id != "" ~}
-RACK_OPT="rack_aware rack_id '${rack_id}'"
-%{ endif ~}
+# Note: rladmin has parsing issues in Redis Enterprise 8.x, so we use the REST API instead
 
 if [ "$${IS_MASTER}" = "true" ]; then
-    log "Creating new cluster: ${cluster_fqdn}"
-    log "Executing: rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password *** $FLASH_OPT $RACK_OPT external_addr $${EXTERNAL_IP}"
-    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' $FLASH_OPT $RACK_OPT external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
-else
-    log "Joining cluster at ${master_ip}"
-    max_retries=10
-    retry_delay=30
-%{ if rack_id != "" ~}
-    JOIN_RACK_OPT="rack_id '${rack_id}'"
+    log "Creating new cluster: ${cluster_fqdn} via REST API"
+
+    # Build JSON payload for cluster creation
+    CREATE_PAYLOAD=$(cat <<EOJSON
+{
+  "action": "create_cluster",
+  "cluster": {
+    "name": "${cluster_fqdn}"
+  },
+  "node": {
+    "paths": {
+%{ if flash_enabled ~}
+      "bigstore_path": "/var/opt/redislabs/flash"
 %{ else ~}
-    JOIN_RACK_OPT=""
+      "persistent_path": "/var/opt/redislabs/persist"
 %{ endif ~}
+    },
+%{ if flash_enabled ~}
+    "bigstore_enabled": true,
+%{ endif ~}
+    "identity": {
+      "external_addr": ["$${EXTERNAL_IP}"]
+    }
+  },
+  "credentials": {
+    "username": "${redis_admin_user}",
+    "password": "${redis_admin_password}"
+  }
+}
+EOJSON
+)
+
+    log "Sending bootstrap request..."
+    curl -sk -X POST -H "Content-Type: application/json" -d "$CREATE_PAYLOAD" https://localhost:9443/v1/bootstrap/create_cluster 2>&1 | tee -a "$LOG_FILE"
+
+    # Wait for bootstrap to complete
+    log "Waiting for cluster creation to complete..."
+    for i in $(seq 1 60); do
+        STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "unknown"')
+        log "Bootstrap state: $STATE"
+        if [ "$STATE" = "completed" ] || [ "$STATE" = "null" ] || [ -z "$STATE" ]; then
+            log "Cluster creation completed"
+            break
+        fi
+        if [ "$STATE" = "error" ]; then
+            log "Cluster creation failed!"
+            curl -sk https://localhost:9443/v1/bootstrap 2>&1 | tee -a "$LOG_FILE"
+            exit 1
+        fi
+        sleep 5
+    done
+else
+    log "Joining cluster at ${master_ip} via REST API"
+    max_retries=20
+    retry_delay=30
+
+    # Build JSON payload for cluster join
+    JOIN_PAYLOAD=$(cat <<EOJSON
+{
+  "action": "join_cluster",
+  "cluster": {
+    "nodes": ["${master_ip}"]
+  },
+  "node": {
+    "paths": {
+%{ if flash_enabled ~}
+      "bigstore_path": "/var/opt/redislabs/flash"
+%{ else ~}
+      "persistent_path": "/var/opt/redislabs/persist"
+%{ endif ~}
+    },
+%{ if flash_enabled ~}
+    "bigstore_enabled": true,
+%{ endif ~}
+    "identity": {
+      "external_addr": ["$${EXTERNAL_IP}"]
+    }
+  },
+  "credentials": {
+    "username": "${redis_admin_user}",
+    "password": "${redis_admin_password}"
+  }
+}
+EOJSON
+)
 
     for i in $(seq 1 $max_retries); do
         log "Join attempt $i/$max_retries..."
-        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' $FLASH_OPT $JOIN_RACK_OPT external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
-            log "Successfully joined cluster"
+
+        # Check if already part of cluster
+        STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "idle"')
+        if [ "$STATE" = "completed" ] || [ "$STATE" = "null" ] || [ -z "$STATE" ]; then
+            log "Already joined cluster"
             break
         fi
 
-        log "Join failed, retrying in $${retry_delay}s..."
+        curl -sk -X POST -H "Content-Type: application/json" -d "$JOIN_PAYLOAD" https://localhost:9443/v1/bootstrap/join_cluster 2>&1 | tee -a "$LOG_FILE"
+
+        # Wait for join to complete
+        for j in $(seq 1 30); do
+            STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "unknown"')
+            if [ "$STATE" = "completed" ] || [ "$STATE" = "null" ] || [ -z "$STATE" ]; then
+                log "Successfully joined cluster"
+                break 2
+            fi
+            if [ "$STATE" = "error" ]; then
+                log "Join failed, will retry..."
+                curl -sk https://localhost:9443/v1/bootstrap 2>&1 | tee -a "$LOG_FILE"
+                break
+            fi
+            sleep 5
+        done
+
+        log "Retrying in $${retry_delay}s..."
         sleep $retry_delay
     done
 fi
