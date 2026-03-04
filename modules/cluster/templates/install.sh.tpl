@@ -130,45 +130,37 @@ echo "$${INTERNAL_IP} redis-node-$${NODE_INDEX}" >> /etc/hosts
 # =============================================================================
 # Create or Join Cluster
 # =============================================================================
-# Export password so rladmin can read it from environment
-export RLEC_PASSWORD="$${REDIS_ADMIN_PASSWORD}"
-
 if [ "$${IS_MASTER}" = "true" ]; then
-    log "Creating new cluster: $${CLUSTER_FQDN}"
-
-    # Build command with conditional parts
-    CMD_OPTS=""
-    if [ "$${FLASH_ENABLED}" = "true" ]; then
-        CMD_OPTS="$CMD_OPTS flash_enabled"
-    fi
-    if [ -n "$${RACK_ID}" ]; then
-        CMD_OPTS="$CMD_OPTS rack_aware rack_id $${RACK_ID}"
-    fi
-    if [ "$${EXTERNAL_IP}" != "none" ]; then
-        CMD_OPTS="$CMD_OPTS external_addr $${EXTERNAL_IP}"
-    fi
-
-    log "Executing: rladmin cluster create name $${CLUSTER_FQDN} username $${REDIS_ADMIN_USER} password *** $CMD_OPTS"
-    /opt/redislabs/bin/rladmin cluster create name "$${CLUSTER_FQDN}" username "$${REDIS_ADMIN_USER}" password env:RLEC_PASSWORD $CMD_OPTS 2>&1 | tee -a "$LOG_FILE"
+    log "Creating new cluster: ${cluster_fqdn}"
+%{ if flash_enabled == "true" && rack_id != "" ~}
+    log "Executing: rladmin cluster create (with flash + rack_aware)"
+    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled rack_aware rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
+%{ elif flash_enabled == "true" ~}
+    log "Executing: rladmin cluster create (with flash)"
+    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
+%{ elif rack_id != "" ~}
+    log "Executing: rladmin cluster create (with rack_aware)"
+    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' rack_aware rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
+%{ else ~}
+    log "Executing: rladmin cluster create"
+    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
+%{ endif ~}
 else
-    log "Joining cluster at $${MASTER_IP}"
+    log "Joining cluster at ${master_ip}"
     max_retries=10
     retry_delay=30
 
-    # Build command options
-    CMD_OPTS=""
-    if [ -n "$${RACK_ID}" ]; then
-        CMD_OPTS="$CMD_OPTS rack_id $${RACK_ID}"
-    fi
-    if [ "$${EXTERNAL_IP}" != "none" ]; then
-        CMD_OPTS="$CMD_OPTS external_addr $${EXTERNAL_IP}"
-    fi
-
     for i in $(seq 1 $max_retries); do
         log "Join attempt $i/$max_retries..."
-        log "Executing: rladmin cluster join nodes $${MASTER_IP} username $${REDIS_ADMIN_USER} password *** $CMD_OPTS"
-
-        if /opt/redislabs/bin/rladmin cluster join nodes "$${MASTER_IP}" username "$${REDIS_ADMIN_USER}" password env:RLEC_PASSWORD $CMD_OPTS 2>&1 | tee -a "$LOG_FILE"; then
+%{ if flash_enabled == "true" && rack_id != "" ~}
+        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
+%{ elif flash_enabled == "true" ~}
+        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
+%{ elif rack_id != "" ~}
+        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
+%{ else ~}
+        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
+%{ endif ~}
             log "Successfully joined cluster"
             break
         fi
