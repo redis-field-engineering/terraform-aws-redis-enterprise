@@ -130,48 +130,45 @@ echo "$${INTERNAL_IP} redis-node-$${NODE_INDEX}" >> /etc/hosts
 # =============================================================================
 # Create or Join Cluster
 # =============================================================================
+# Export password so rladmin can read it from environment
+export RLEC_PASSWORD="$${REDIS_ADMIN_PASSWORD}"
+
 if [ "$${IS_MASTER}" = "true" ]; then
     log "Creating new cluster: $${CLUSTER_FQDN}"
-    log "Executing: rladmin cluster create ..."
 
-    # Build command parts
-    CREATE_CMD="/opt/redislabs/bin/rladmin cluster create"
-    CREATE_CMD="$CREATE_CMD name $${CLUSTER_FQDN}"
-    CREATE_CMD="$CREATE_CMD username $${REDIS_ADMIN_USER}"
-
+    # Build command with conditional parts
+    CMD_OPTS=""
     if [ "$${FLASH_ENABLED}" = "true" ]; then
-        CREATE_CMD="$CREATE_CMD flash_enabled"
+        CMD_OPTS="$CMD_OPTS flash_enabled"
     fi
     if [ -n "$${RACK_ID}" ]; then
-        CREATE_CMD="$CREATE_CMD rack_aware rack_id $${RACK_ID}"
+        CMD_OPTS="$CMD_OPTS rack_aware rack_id $${RACK_ID}"
     fi
     if [ "$${EXTERNAL_IP}" != "none" ]; then
-        CREATE_CMD="$CREATE_CMD external_addr $${EXTERNAL_IP}"
+        CMD_OPTS="$CMD_OPTS external_addr $${EXTERNAL_IP}"
     fi
 
-    # Execute with password as env var to avoid quoting issues
-    RLEC_PASSWORD="$${REDIS_ADMIN_PASSWORD}" $CREATE_CMD password env:RLEC_PASSWORD 2>&1 | tee -a "$LOG_FILE"
+    log "Executing: rladmin cluster create name $${CLUSTER_FQDN} username $${REDIS_ADMIN_USER} password *** $CMD_OPTS"
+    /opt/redislabs/bin/rladmin cluster create name "$${CLUSTER_FQDN}" username "$${REDIS_ADMIN_USER}" password env:RLEC_PASSWORD $CMD_OPTS 2>&1 | tee -a "$LOG_FILE"
 else
     log "Joining cluster at $${MASTER_IP}"
     max_retries=10
     retry_delay=30
 
+    # Build command options
+    CMD_OPTS=""
+    if [ -n "$${RACK_ID}" ]; then
+        CMD_OPTS="$CMD_OPTS rack_id $${RACK_ID}"
+    fi
+    if [ "$${EXTERNAL_IP}" != "none" ]; then
+        CMD_OPTS="$CMD_OPTS external_addr $${EXTERNAL_IP}"
+    fi
+
     for i in $(seq 1 $max_retries); do
         log "Join attempt $i/$max_retries..."
+        log "Executing: rladmin cluster join nodes $${MASTER_IP} username $${REDIS_ADMIN_USER} password *** $CMD_OPTS"
 
-        # Build command parts
-        JOIN_CMD="/opt/redislabs/bin/rladmin cluster join"
-        JOIN_CMD="$JOIN_CMD nodes $${MASTER_IP}"
-        JOIN_CMD="$JOIN_CMD username $${REDIS_ADMIN_USER}"
-
-        if [ -n "$${RACK_ID}" ]; then
-            JOIN_CMD="$JOIN_CMD rack_id $${RACK_ID}"
-        fi
-        if [ "$${EXTERNAL_IP}" != "none" ]; then
-            JOIN_CMD="$JOIN_CMD external_addr $${EXTERNAL_IP}"
-        fi
-
-        if RLEC_PASSWORD="$${REDIS_ADMIN_PASSWORD}" $JOIN_CMD password env:RLEC_PASSWORD 2>&1 | tee -a "$LOG_FILE"; then
+        if /opt/redislabs/bin/rladmin cluster join nodes "$${MASTER_IP}" username "$${REDIS_ADMIN_USER}" password env:RLEC_PASSWORD $CMD_OPTS 2>&1 | tee -a "$LOG_FILE"; then
             log "Successfully joined cluster"
             break
         fi
