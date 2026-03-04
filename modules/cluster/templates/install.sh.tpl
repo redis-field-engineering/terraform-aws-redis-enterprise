@@ -130,38 +130,38 @@ echo "$${INTERNAL_IP} redis-node-$${NODE_INDEX}" >> /etc/hosts
 # =============================================================================
 # Create or Join Cluster
 # =============================================================================
-build_cluster_command() {
-    local cmd="/opt/redislabs/bin/rladmin cluster"
+run_cluster_command() {
+    local base_args=()
+    local password_arg="$${REDIS_ADMIN_PASSWORD}"
 
     if [ "$${IS_MASTER}" = "true" ]; then
-        cmd="$cmd create name $${CLUSTER_FQDN}"
-        cmd="$cmd username $${REDIS_ADMIN_USER} password '$${REDIS_ADMIN_PASSWORD}'"
+        base_args+=("create" "name" "$${CLUSTER_FQDN}")
+        base_args+=("username" "$${REDIS_ADMIN_USER}" "password" "$password_arg")
         if [ "$${FLASH_ENABLED}" = "true" ]; then
-            cmd="$cmd flash_enabled"
+            base_args+=("flash_enabled")
         fi
         if [ -n "$${RACK_ID}" ]; then
-            cmd="$cmd rack_aware rack_id '$${RACK_ID}'"
+            base_args+=("rack_aware" "rack_id" "$${RACK_ID}")
         fi
     else
-        cmd="$cmd join nodes $${MASTER_IP}"
-        cmd="$cmd username $${REDIS_ADMIN_USER} password '$${REDIS_ADMIN_PASSWORD}'"
+        base_args+=("join" "nodes" "$${MASTER_IP}")
+        base_args+=("username" "$${REDIS_ADMIN_USER}" "password" "$password_arg")
         if [ -n "$${RACK_ID}" ]; then
-            cmd="$cmd rack_id '$${RACK_ID}'"
+            base_args+=("rack_id" "$${RACK_ID}")
         fi
     fi
 
     if [ "$${EXTERNAL_IP}" != "none" ]; then
-        cmd="$cmd external_addr $${EXTERNAL_IP}"
+        base_args+=("external_addr" "$${EXTERNAL_IP}")
     fi
 
-    echo "$cmd"
+    /opt/redislabs/bin/rladmin cluster "$${base_args[@]}"
 }
 
 if [ "$${IS_MASTER}" = "true" ]; then
     log "Creating new cluster: $${CLUSTER_FQDN}"
-    cmd=$(build_cluster_command)
-    log "Executing: $${cmd//$${REDIS_ADMIN_PASSWORD}/***}"
-    bash -c "$cmd" 2>&1 | tee -a "$LOG_FILE"
+    log "Executing: rladmin cluster create name $${CLUSTER_FQDN} username $${REDIS_ADMIN_USER} password *** ..."
+    run_cluster_command 2>&1 | tee -a "$LOG_FILE"
 else
     log "Joining cluster at $${MASTER_IP}"
     max_retries=10
@@ -169,9 +169,8 @@ else
 
     for i in $(seq 1 $max_retries); do
         log "Join attempt $i/$max_retries..."
-        cmd=$(build_cluster_command)
 
-        if bash -c "$cmd" 2>&1 | tee -a "$LOG_FILE"; then
+        if run_cluster_command 2>&1 | tee -a "$LOG_FILE"; then
             log "Successfully joined cluster"
             break
         fi
