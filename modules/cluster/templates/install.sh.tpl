@@ -130,37 +130,33 @@ echo "$${INTERNAL_IP} redis-node-$${NODE_INDEX}" >> /etc/hosts
 # =============================================================================
 # Create or Join Cluster
 # =============================================================================
+# Build optional arguments
+FLASH_OPT=""
+RACK_OPT=""
+%{ if flash_enabled ~}
+FLASH_OPT="flash_enabled"
+%{ endif ~}
+%{ if rack_id != "" ~}
+RACK_OPT="rack_aware rack_id '${rack_id}'"
+%{ endif ~}
+
 if [ "$${IS_MASTER}" = "true" ]; then
     log "Creating new cluster: ${cluster_fqdn}"
-%{ if flash_enabled == "true" && rack_id != "" ~}
-    log "Executing: rladmin cluster create (with flash + rack_aware)"
-    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled rack_aware rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
-%{ elif flash_enabled == "true" ~}
-    log "Executing: rladmin cluster create (with flash)"
-    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
-%{ elif rack_id != "" ~}
-    log "Executing: rladmin cluster create (with rack_aware)"
-    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' rack_aware rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
-%{ else ~}
-    log "Executing: rladmin cluster create"
-    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
-%{ endif ~}
+    log "Executing: rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password *** $FLASH_OPT $RACK_OPT external_addr $${EXTERNAL_IP}"
+    /opt/redislabs/bin/rladmin cluster create name ${cluster_fqdn} username ${redis_admin_user} password '${redis_admin_password}' $FLASH_OPT $RACK_OPT external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"
 else
     log "Joining cluster at ${master_ip}"
     max_retries=10
     retry_delay=30
+%{ if rack_id != "" ~}
+    JOIN_RACK_OPT="rack_id '${rack_id}'"
+%{ else ~}
+    JOIN_RACK_OPT=""
+%{ endif ~}
 
     for i in $(seq 1 $max_retries); do
         log "Join attempt $i/$max_retries..."
-%{ if flash_enabled == "true" && rack_id != "" ~}
-        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
-%{ elif flash_enabled == "true" ~}
-        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' flash_enabled external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
-%{ elif rack_id != "" ~}
-        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' rack_id '${rack_id}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
-%{ else ~}
-        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
-%{ endif ~}
+        if /opt/redislabs/bin/rladmin cluster join nodes ${master_ip} username ${redis_admin_user} password '${redis_admin_password}' $FLASH_OPT $JOIN_RACK_OPT external_addr $${EXTERNAL_IP} 2>&1 | tee -a "$LOG_FILE"; then
             log "Successfully joined cluster"
             break
         fi
