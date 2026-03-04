@@ -77,7 +77,10 @@ locals {
   # Redis Download URL
   # ---------------------------------------------------------------------------
   # Construct download URL from version if not provided
-  # Format: https://s3.amazonaws.com/redis-enterprise-software-downloads/{version}/redislabs-{version}-jammy-amd64.tar
-  redis_download_url = var.redis_download_url != "" ? var.redis_download_url : "https://s3.amazonaws.com/redis-enterprise-software-downloads/${var.redis_version}/redislabs-${var.redis_version}-jammy-amd64.tar"
+  # The S3 URL structure is: /redis-enterprise-software-downloads/{base_version}/redislabs-{full_version}-{os}-{arch}.tar
+  # Where base_version is "8.0.10" and full_version is "8.0.10-76"
+  # Extract base version by splitting on "-" and taking the first part
+  redis_base_version = split("-", var.redis_version)[0]
+  redis_download_url = var.redis_download_url != "" ? var.redis_download_url : "https://s3.amazonaws.com/redis-enterprise-software-downloads/${local.redis_base_version}/redislabs-${var.redis_version}-jammy-amd64.tar"
 }
 

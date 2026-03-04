@@ -39,9 +39,9 @@ variable "redis_admin_password" {
 }
 
 variable "redis_version" {
-  description = "Redis Enterprise version to install (e.g., '8.0.6-54'). Used to construct download URL if redis_download_url is not provided."
+  description = "Redis Enterprise version to install (e.g., '8.0.10-76'). Format: {version}-{build}. Used to construct download URL if redis_download_url is not provided."
   type        = string
-  default     = "8.0.6-54"
+  default     = "8.0.10-76"
 }
 
 variable "redis_download_url" {

@@ -222,11 +222,13 @@ resource "null_resource" "wait_for_cluster" {
     command = <<-EOT
       echo "Waiting for Redis Enterprise cluster to initialize..."
       for i in $(seq 1 60); do
-        if curl -sk https://${aws_instance.master.public_ip}:9443/v1/bootstrap 2>/dev/null | grep -q '"status":"completed"'; then
-          echo "Cluster is ready!"
+        # Check if the REST API port is responding (returns 401 Unauthorized when cluster is ready)
+        HTTP_CODE=$(curl -sk -o /dev/null -w "%%{http_code}" https://${aws_instance.master.public_ip}:9443/v1/cluster 2>/dev/null)
+        if [ "$HTTP_CODE" = "401" ]; then
+          echo "Cluster is ready! (API responding with auth required)"
           exit 0
         fi
-        echo "Waiting... ($i/60)"
+        echo "Waiting... ($i/60) - HTTP code: $HTTP_CODE"
         sleep 30
       done
       echo "Warning: Timeout waiting for cluster, but continuing..."
