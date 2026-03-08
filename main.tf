@@ -53,9 +53,10 @@ module "cluster" {
   source   = "./modules/cluster"
   for_each = toset(var.regions)
 
-  name         = "${var.name}-${each.key}"
-  cluster_size = var.cluster_size
-  rack_aware   = var.rack_aware
+  name                     = "${var.name}-${each.key}"
+  cluster_size             = var.cluster_size
+  rack_aware               = var.rack_aware
+  placement_group_strategy = var.placement_group_strategy
 
   # Instance configuration
   instance_type    = var.instance_type

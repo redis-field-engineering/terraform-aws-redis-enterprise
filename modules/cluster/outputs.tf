@@ -19,7 +19,7 @@ output "node_private_ips" {
 
 output "node_public_ips" {
   description = "Public IP addresses of all nodes (empty if private cluster)."
-  value       = var.private_cluster ? [] : concat(
+  value = var.private_cluster ? [] : concat(
     [aws_instance.master.public_ip],
     aws_instance.workers[*].public_ip
   )
@@ -43,5 +43,15 @@ output "admin_ui_url" {
 output "key_pair_name" {
   description = "Key pair name for SSH access."
   value       = aws_key_pair.redis.key_name
+}
+
+output "placement_group_name" {
+  description = "Placement group name (null if placement_group_strategy is 'none')."
+  value       = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].name : null
+}
+
+output "placement_group_id" {
+  description = "Placement group ID (null if placement_group_strategy is 'none')."
+  value       = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].id : null
 }
 
