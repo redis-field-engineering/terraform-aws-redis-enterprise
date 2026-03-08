@@ -1,36 +1,43 @@
-[0m[1mmodule.redis_enterprise.tls_private_key.generated[0]: Refreshing state... [id=39fea6ce58a6d155f7ab0a6190122dcb33c21738][0m
 [0m[1mmodule.redis_enterprise.random_password.redis_admin[0]: Refreshing state... [id=none][0m
+[0m[1mmodule.redis_enterprise.tls_private_key.generated[0]: Refreshing state... [id=c555a17430ae89d504b4fe7fc34654424ffd75dc][0m
 [0m[1mmodule.redis_enterprise.module.network["us-east-1"].data.aws_availability_zones.available: Reading...[0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_vpc.main: Refreshing state... [id=vpc-0d43c31bdd130d61c][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].data.aws_availability_zones.available: Read complete after 0s [id=us-east-1][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_internet_gateway.main: Refreshing state... [id=igw-02b60c0573cdab800][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0]: Refreshing state... [id=subnet-0106630a5ec8d1ad3][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"]: Refreshing state... [id=subnet-026ee6c84045c7e34][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1c"]: Refreshing state... [id=subnet-0378166623d4a75d7][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"]: Refreshing state... [id=subnet-0f758faecc1d75054][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group.redis: Refreshing state... [id=sg-0a58023fa5da6b452][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table.public: Refreshing state... [id=rtb-0c0e6c83d1e989d1e][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0]: Refreshing state... [id=rtbassoc-0a6cf62a7dcba6507][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.internal: Refreshing state... [id=sgrule-2469760565][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.discovery: Refreshing state... [id=sgrule-3083085855][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.egress: Refreshing state... [id=sgrule-3407993035][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.ssh: Refreshing state... [id=sgrule-2694578324][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui: Refreshing state... [id=sgrule-3016074521][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.metrics: Refreshing state... [id=sgrule-2947654827][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.database: Refreshing state... [id=sgrule-3413184527][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.rest_api: Refreshing state... [id=sgrule-747879410][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"]: Refreshing state... [id=rtbassoc-0d93b972e051930fd][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1c"]: Refreshing state... [id=rtbassoc-05d27e5f3652d4ff6][0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"]: Refreshing state... [id=rtbassoc-022dd8357987d565d][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_vpc.main: Refreshing state... [id=vpc-030ae8b960eff81ad][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].data.aws_availability_zones.available: Read complete after 1s [id=us-east-1][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group.redis: Refreshing state... [id=sg-0bed740e9b16e16da][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_internet_gateway.main: Refreshing state... [id=igw-09450f58fefbe65aa][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1c"]: Refreshing state... [id=subnet-0670b87b89076f639][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"]: Refreshing state... [id=subnet-09ab832ca3bccca78][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0]: Refreshing state... [id=subnet-03b2d7aa8283c42d5][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"]: Refreshing state... [id=subnet-0e386d7bb8067f43e][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.ssh: Refreshing state... [id=sgrule-254491582][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.internal: Refreshing state... [id=sgrule-2980197341][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.database: Refreshing state... [id=sgrule-3912684470][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.rest_api: Refreshing state... [id=sgrule-651131103][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.egress: Refreshing state... [id=sgrule-1659983100][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.metrics: Refreshing state... [id=sgrule-2783799174][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.discovery: Refreshing state... [id=sgrule-3180915506][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui: Refreshing state... [id=sgrule-3113838132][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table.public: Refreshing state... [id=rtb-0f8fd6eee87848fc1][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0]: Refreshing state... [id=rtbassoc-07dfa1eb2411a3c5f][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"]: Refreshing state... [id=rtbassoc-0eb4cc5d25eca628c][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"]: Refreshing state... [id=rtbassoc-0313b43959d6bc0fb][0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1c"]: Refreshing state... [id=rtbassoc-0abd19a7855826c87][0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_key_pair.redis: Refreshing state... [id=redis-simple-us-east-1-key][0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].data.aws_ami.ubuntu[0]: Reading...[0m[0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role.redis: Refreshing state... [id=redis-simple-us-east-1-redis-role][0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].data.aws_ami.ubuntu[0]: Read complete after 1s [id=ami-04680790a315cd58d][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].data.aws_ami.ubuntu[0]: Reading...[0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].data.aws_ami.ubuntu[0]: Read complete after 0s [id=ami-04680790a315cd58d][0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role_policy.redis: Refreshing state... [id=redis-simple-us-east-1-redis-role:redis-simple-us-east-1-redis-policy][0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_instance_profile.redis: Refreshing state... [id=redis-simple-us-east-1-redis-profile][0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Refreshing state... [id=i-0cde69d1a3563427f][0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Refreshing state... [id=i-0307c67f2094e7e75][0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Refreshing state... [id=i-00fe1d543be2dfeb7][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Refreshing state... [id=i-0cc3ac387334403dd][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Refreshing state... [id=i-0bb229c747504e557][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Refreshing state... [id=i-0a92b660bdee3955c][0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Refreshing state... [id=1851126940849095990][0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].data.aws_ami.ubuntu[0]: Reading...[0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_eip.bastion: Refreshing state... [id=eipalloc-0b4978ba5b5ed6e91][0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_security_group.bastion: Refreshing state... [id=sg-06dfe071148c43f1f][0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].data.aws_ami.ubuntu[0]: Read complete after 0s [id=ami-04680790a315cd58d][0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Refreshing state... [id=i-0dd4c35eba3c1ef1a][0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_eip_association.bastion: Refreshing state... [id=eipassoc-0fda3136adc4fddeb][0m
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -59,38 +66,514 @@ Terraform will perform the following actions:
 [0m  [31m-[0m[0m resource "tls_private_key" "generated" {
       [31m-[0m[0m algorithm                     = "RSA" [90m-> null[0m[0m
       [31m-[0m[0m ecdsa_curve                   = "P224" [90m-> null[0m[0m
-      [31m-[0m[0m id                            = "39fea6ce58a6d155f7ab0a6190122dcb33c21738" [90m-> null[0m[0m
+      [31m-[0m[0m id                            = "c555a17430ae89d504b4fe7fc34654424ffd75dc" [90m-> null[0m[0m
       [31m-[0m[0m private_key_openssh           = (sensitive value) [90m-> null[0m[0m
       [31m-[0m[0m private_key_pem               = (sensitive value) [90m-> null[0m[0m
       [31m-[0m[0m private_key_pem_pkcs8         = (sensitive value) [90m-> null[0m[0m
-      [31m-[0m[0m public_key_fingerprint_md5    = "d5:75:ef:65:1c:5d:01:36:61:89:6b:80:33:91:53:12" [90m-> null[0m[0m
-      [31m-[0m[0m public_key_fingerprint_sha256 = "SHA256:flDJT5dvbbMI+Mq/u7l9ZZdPe4G4Ad9wdNTPlJ1s130" [90m-> null[0m[0m
+      [31m-[0m[0m public_key_fingerprint_md5    = "87:20:38:84:32:ba:81:aa:de:33:19:f3:3d:9e:7b:1e" [90m-> null[0m[0m
+      [31m-[0m[0m public_key_fingerprint_sha256 = "SHA256:9I/VxnYFIBWLKjr6B1bv9gowtim5qG7WweCMzkxcfZA" [90m-> null[0m[0m
       [31m-[0m[0m public_key_openssh            = <<-EOT
-            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCuv2VZYht/zOaxkdzUolNYQLPB510m1EWpk5PfGtaaWVDwlHc65EMPaV27aoJ20UByvrMbN7iWXuv5u+YbNnmkmToLAk8DSw91R/gShM2wXq+mfwyXsuE5amh7s3QC/5siwPEhR94Uh4dKugDLN7Fr9xmRUz5voNrl45SL0U7BZYOt62VFgJf97+JvXHYZS5oxhE9xO3ZrcNUPSxaZnGRzCmp6fVlTGkEoNrwZguAle4hjDnEZNzGV6oWgLE3EHphWritzPvNqgdHq15DASsDCwk3wLFM8v15i8Ut/udyuKfTJWx+LxDiQmtPmNHTP5K9lLP7/Yw160v7T4optM6th5JnySD1U0EcvwGn+l60DtzsW0QbmYq+fW6Ptae7CWdQFiyvTQ77Zsdsjwerq8w3tU9umaSMiTPnsEt0hMzMjla9TAadVQgbNvS1Mn2JX+mVSQLHeHZZFhnyiYyaoB7pdXm3tektGWeNblzJ2e0XmuEFfH0732uz23iBgKxWHGtyjBewN0AyeuU+KzlqmYzl/weprnGmifqgZ60K3vf8Q1XsSWaQkJ94IIm/3TSy7G3124XvQUZ4snB379Z/vuvUzriAyndxBw1JVQrOx3bPTKLgGFyNzBDehoXcqRxndGsKbBErZzfOuFzVIgWl2G8qEPC3qGLhHtg0rNr5oxwra8Q==
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDk8d1zIUK58Y6Z+aNfK3b4TfA0yHdQX7xN12PCnqVSnFKYY/TBDq8WsviRGXZ4BrVNj/TumnzdZECofRfZySjCuAc3EDMmrGv87vVgpIAwIJMhcRWkb47tykIkFajES6JbqRRzVlIZKbusxb37jW3fFKB0/tOy/ladHZ4tc60XExJnExvR0smdtttGPalYqQT6ZCy2eqZecx5OocC0hkHF+9mLBBDrwLIFbb5wQjDmS6wgBZwobnRyk99N68Y/lg1Y7LPKDCHUUFZfNZRtP8uqUQGYxUptHnPVEHqNulo94nCTpkngFAL1wWyzLwG62ybdijOeZiBCNWGLebVEdmKf5MQChhsah629pDqVGlRJNObxSOT+BpdCZXEFnpDfladgWoVy4WO74ZNpLmUrM+43S8q0AkachFXogR1UExuV4j0bFcc+wP7utszh0pqb0bo8EDlv0yoW15H+NvtzHjdXgEE7bqBX8doavunliUnPDnVzQZccDk2o9bU0QAU9R+bcpgJjltoRjzhPQ4y2E/Mu6NCXvFs0eutg+t6GMeWdn/l8cXf0px0gzQWUclIynxdDc+WvA3pl1Ni9xrWbYCgHnBNSDuz4hAG/kSbum3/rx0jMARG2JixNRj1TPHaLKc5liV6YaUuKkgEkxyGYICLrSpdfMQbMNTBwIPCQEctcIw==
         EOT [90m-> null[0m[0m
       [31m-[0m[0m public_key_pem                = <<-EOT
             -----BEGIN PUBLIC KEY-----
-            MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEArr9lWWIbf8zmsZHc1KJT
-            WECzweddJtRFqZOT3xrWmllQ8JR3OuRDD2ldu2qCdtFAcr6zGze4ll7r+bvmGzZ5
-            pJk6CwJPA0sPdUf4EoTNsF6vpn8Ml7LhOWpoe7N0Av+bIsDxIUfeFIeHSroAyzex
-            a/cZkVM+b6Da5eOUi9FOwWWDretlRYCX/e/ib1x2GUuaMYRPcTt2a3DVD0sWmZxk
-            cwpqen1ZUxpBKDa8GYLgJXuIYw5xGTcxleqFoCxNxB6YVq4rcz7zaoHR6teQwErA
-            wsJN8CxTPL9eYvFLf7ncrin0yVsfi8Q4kJrT5jR0z+SvZSz+/2MNetL+0+KKbTOr
-            YeSZ8kg9VNBHL8Bp/petA7c7FtEG5mKvn1uj7WnuwlnUBYsr00O+2bHbI8Hq6vMN
-            7VPbpmkjIkz57BLdITMzI5WvUwGnVUIGzb0tTJ9iV/plUkCx3h2WRYZ8omMmqAe6
-            XV5t7XpLRlnjW5cydntF5rhBXx9O99rs9t4gYCsVhxrcowXsDdAMnrlPis5apmM5
-            f8Hqa5xpon6oGetCt73/ENV7ElmkJCfeCCJv900suxt9duF70FGeLJwd+/Wf77r1
-            M64gMp3cQcNSVUKzsd2z0yi4BhcjcwQ3oaF3KkcZ3RrCmwRK2c3zrhc1SIFpdhvK
-            hDwt6hi4R7YNKza+aMcK2vECAwEAAQ==
+            MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA5PHdcyFCufGOmfmjXyt2
+            +E3wNMh3UF+8Tddjwp6lUpxSmGP0wQ6vFrL4kRl2eAa1TY/07pp83WRAqH0X2cko
+            wrgHNxAzJqxr/O71YKSAMCCTIXEVpG+O7cpCJBWoxEuiW6kUc1ZSGSm7rMW9+41t
+            3xSgdP7Tsv5WnR2eLXOtFxMSZxMb0dLJnbbbRj2pWKkE+mQstnqmXnMeTqHAtIZB
+            xfvZiwQQ68CyBW2+cEIw5kusIAWcKG50cpPfTevGP5YNWOyzygwh1FBWXzWUbT/L
+            qlEBmMVKbR5z1RB6jbpaPeJwk6ZJ4BQC9cFssy8Butsm3YoznmYgQjVhi3m1RHZi
+            n+TEAoYbGoetvaQ6lRpUSTTm8Ujk/gaXQmVxBZ6Q35WnYFqFcuFju+GTaS5lKzPu
+            N0vKtAJGnIRV6IEdVBMbleI9GxXHPsD+7rbM4dKam9G6PBA5b9MqFteR/jb7cx43
+            V4BBO26gV/HaGr7p5YlJzw51c0GXHA5NqPW1NEAFPUfm3KYCY5baEY84T0OMthPz
+            LujQl7xbNHrrYPrehjHlnZ/5fHF39KcdIM0FlHJSMp8XQ3PlrwN6ZdTYvca1m2Ao
+            B5wTUg7s+IQBv5Em7pt/68dIzAERtiYsTUY9Uzx2iynOZYlemGlLipIBJMchmCAi
+            60qXXzEGzDUwcCDwkBHLXCMCAwEAAQ==
             -----END PUBLIC KEY-----
         EOT [90m-> null[0m[0m
       [31m-[0m[0m rsa_bits                      = 4096 [90m-> null[0m[0m
     }
 
+[1m  # module.redis_enterprise.module.bastion[0].aws_eip.bastion[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_eip" "bastion" {
+      [31m-[0m[0m allocation_id        = "eipalloc-0b4978ba5b5ed6e91" [90m-> null[0m[0m
+      [31m-[0m[0m arn                  = "arn:aws:ec2:us-east-1:735486936198:elastic-ip/eipalloc-0b4978ba5b5ed6e91" [90m-> null[0m[0m
+      [31m-[0m[0m association_id       = "eipassoc-0fda3136adc4fddeb" [90m-> null[0m[0m
+      [31m-[0m[0m domain               = "vpc" [90m-> null[0m[0m
+      [31m-[0m[0m id                   = "eipalloc-0b4978ba5b5ed6e91" [90m-> null[0m[0m
+      [31m-[0m[0m instance             = "i-0dd4c35eba3c1ef1a" [90m-> null[0m[0m
+      [31m-[0m[0m network_border_group = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface    = "eni-072d67a01eb15295f" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns          = "ip-10-0-100-22.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip           = "10.0.100.22" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns           = "ec2-3-213-36-223.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip            = "3.213.36.223" [90m-> null[0m[0m
+      [31m-[0m[0m public_ipv4_pool     = "amazon" [90m-> null[0m[0m
+      [31m-[0m[0m region               = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m tags                 = {
+          [31m-[0m[0m "ManagedBy" = "terraform"
+          [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+          [31m-[0m[0m "Name"      = "redis-simple-bastion-eip"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all             = {
+          [31m-[0m[0m "ManagedBy" = "terraform"
+          [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+          [31m-[0m[0m "Name"      = "redis-simple-bastion-eip"
+        } [90m-> null[0m[0m
+    }
+
+[1m  # module.redis_enterprise.module.bastion[0].aws_eip_association.bastion[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_eip_association" "bastion" {
+      [31m-[0m[0m allocation_id        = "eipalloc-0b4978ba5b5ed6e91" [90m-> null[0m[0m
+      [31m-[0m[0m id                   = "eipassoc-0fda3136adc4fddeb" [90m-> null[0m[0m
+      [31m-[0m[0m instance_id          = "i-0dd4c35eba3c1ef1a" [90m-> null[0m[0m
+      [31m-[0m[0m network_interface_id = "eni-072d67a01eb15295f" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip_address   = "10.0.100.22" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip            = "3.213.36.223" [90m-> null[0m[0m
+      [31m-[0m[0m region               = "us-east-1" [90m-> null[0m[0m
+    }
+
+[1m  # module.redis_enterprise.module.bastion[0].aws_instance.bastion[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_instance" "bastion" {
+      [31m-[0m[0m ami                                  = "ami-04680790a315cd58d" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:instance/i-0dd4c35eba3c1ef1a" [90m-> null[0m[0m
+      [31m-[0m[0m associate_public_ip_address          = true [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                    = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_termination              = false [90m-> null[0m[0m
+      [31m-[0m[0m ebs_optimized                        = false [90m-> null[0m[0m
+      [31m-[0m[0m force_destroy                        = false [90m-> null[0m[0m
+      [31m-[0m[0m get_password_data                    = false [90m-> null[0m[0m
+      [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "i-0dd4c35eba3c1ef1a" [90m-> null[0m[0m
+      [31m-[0m[0m instance_initiated_shutdown_behavior = "stop" [90m-> null[0m[0m
+      [31m-[0m[0m instance_state                       = "running" [90m-> null[0m[0m
+      [31m-[0m[0m instance_type                        = "t3.medium" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_address_count                   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_addresses                       = [] [90m-> null[0m[0m
+      [31m-[0m[0m key_name                             = "redis-simple-us-east-1-key" [90m-> null[0m[0m
+      [31m-[0m[0m monitoring                           = false [90m-> null[0m[0m
+      [31m-[0m[0m placement_partition_number           = 0 [90m-> null[0m[0m
+      [31m-[0m[0m primary_network_interface_id         = "eni-072d67a01eb15295f" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns                          = "ip-10-0-100-22.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                           = "10.0.100.22" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns                           = "ec2-3-213-36-223.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                            = "3.213.36.223" [90m-> null[0m[0m
+      [31m-[0m[0m region                               = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ips                = [] [90m-> null[0m[0m
+      [31m-[0m[0m security_groups                      = [] [90m-> null[0m[0m
+      [31m-[0m[0m source_dest_check                    = true [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                            = "subnet-03b2d7aa8283c42d5" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "ManagedBy" = "terraform"
+          [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+          [31m-[0m[0m "Name"      = "redis-simple-bastion"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "ManagedBy" = "terraform"
+          [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+          [31m-[0m[0m "Name"      = "redis-simple-bastion"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tenancy                              = "default" [90m-> null[0m[0m
+      [31m-[0m[0m user_data                            = <<-EOT
+            #!/bin/bash
+            # =============================================================================
+            # Bastion/Client Node Preparation Script
+            # Generated by terraform-aws-redis-enterprise module
+            # =============================================================================
+            
+            set -euo pipefail
+            exec > >(tee /var/log/bastion-install.log) 2>&1
+            
+            SSH_USER="ubuntu"
+            CLUSTER_FQDN="cluster.redis-simple.local"
+            MEMTIER_URL="https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.1.1.tar.gz"
+            PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v2.48.0/prometheus-2.48.0.linux-amd64.tar.gz"
+            GRAFANA_VERSION="10.2.2"
+            JAVA_VERSION="21"
+            
+            INSTALL_MEMTIER="true"
+            INSTALL_PROMETHEUS="true"
+            INSTALL_GRAFANA="true"
+            INSTALL_REDISINSIGHT="true"
+            INSTALL_REDIS_CLI="true"
+            
+            LOG_FILE="/home/${SSH_USER}/prepare_client.log"
+            INSTALL_DIR="/home/${SSH_USER}/install"
+            
+            log() {
+                echo "$(date -Is) - $1" | tee -a "$LOG_FILE"
+            }
+            
+            # Wait for user home
+            while [ ! -d "/home/${SSH_USER}" ]; do
+                echo "Waiting for /home/${SSH_USER}..."
+                sleep 5
+            done
+            
+            log "=== Starting bastion preparation ==="
+            
+            # =============================================================================
+            # Wait for cloud-init
+            # =============================================================================
+            log "Waiting for cloud-init..."
+            cloud-init status --wait || true
+            
+            while fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do
+                log "Waiting for apt lock..."
+                sleep 5
+            done
+            
+            # =============================================================================
+            # APT Configuration
+            # =============================================================================
+            export DEBIAN_FRONTEND=noninteractive
+            export NEEDRESTART_MODE=a
+            
+            if [ -d /etc/needrestart/conf.d ]; then
+                cat > /etc/needrestart/conf.d/99-disable-interactive.conf << 'EOF'
+            $nrconf{restart} = 'a';
+            $nrconf{kernelhints} = 0;
+            EOF
+            fi
+            
+            # =============================================================================
+            # System Packages
+            # =============================================================================
+            log "Installing system packages..."
+            apt-get -y update
+            apt-get -y install \
+                vim htop iputils-ping netcat-openbsd dnsutils curl wget \
+                jq openssl ca-certificates python3 python3-pip python3-venv \
+                openjdk-${JAVA_VERSION}-jdk build-essential autoconf automake \
+                libpcre3-dev libevent-dev pkg-config zlib1g-dev libssl-dev \
+                apt-transport-https software-properties-common gnupg
+            
+            mkdir -p "${INSTALL_DIR}"
+            cd "${INSTALL_DIR}"
+            
+            # =============================================================================
+            # Memtier Benchmark
+            # =============================================================================
+            if [ "${INSTALL_MEMTIER}" = "true" ]; then
+                log "Installing memtier_benchmark..."
+                wget -O memtier.tar.gz "${MEMTIER_URL}"
+                tar xfz memtier.tar.gz
+                mv memtier_benchmark-*/ memtier
+                pushd memtier
+                autoreconf -ivf
+                ./configure
+                make -j$(nproc)
+                make install
+                popd
+                log "memtier_benchmark installed"
+            fi
+            
+            # =============================================================================
+            # Redis CLI
+            # =============================================================================
+            if [ "${INSTALL_REDIS_CLI}" = "true" ]; then
+                log "Installing redis-cli..."
+                curl -fsSL https://packages.redis.io/gpg | gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+                chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+                echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" > /etc/apt/sources.list.d/redis.list
+                apt-get update
+                apt-get install -y redis-tools
+                systemctl stop redis-server 2>/dev/null || true
+                systemctl disable redis-server 2>/dev/null || true
+                log "redis-cli installed"
+            fi
+            
+            # =============================================================================
+            # Prometheus
+            # =============================================================================
+            if [ "${INSTALL_PROMETHEUS}" = "true" ]; then
+                log "Installing Prometheus..."
+                wget -O prometheus.tar.gz "${PROMETHEUS_URL}"
+                tar xfz prometheus.tar.gz
+                mv prometheus-*/ prometheus
+                
+                groupadd --system prometheus 2>/dev/null || true
+                useradd -s /sbin/nologin --system -g prometheus prometheus 2>/dev/null || true
+                mkdir -p /var/lib/prometheus /etc/prometheus/{rules,rules.d,files_sd}
+                
+                mv prometheus/prometheus prometheus/promtool /usr/local/bin/
+                mv prometheus/consoles/ prometheus/console_libraries/ /etc/prometheus/
+                
+                cat > /etc/prometheus/prometheus.yml << PROMCFG
+            global:
+              scrape_interval: 15s
+            rule_files:
+              - "rules/*.yml"
+            scrape_configs:
+              - job_name: "redis-enterprise"
+                scheme: https
+                tls_config:
+                  insecure_skip_verify: true
+                scrape_interval: 30s
+                metrics_path: /v2
+                static_configs:
+                  - targets: ['${CLUSTER_FQDN}:8070']
+                    labels:
+                      cluster: '${CLUSTER_FQDN}'
+            PROMCFG
+            
+                cat > /etc/systemd/system/prometheus.service << 'PROMSVC'
+            [Unit]
+            Description=Prometheus
+            Wants=network-online.target
+            After=network-online.target
+            
+            [Service]
+            User=prometheus
+            Group=prometheus
+            ExecStart=/usr/local/bin/prometheus \
+              --config.file=/etc/prometheus/prometheus.yml \
+              --storage.tsdb.path=/var/lib/prometheus \
+              --web.console.templates=/etc/prometheus/consoles \
+              --web.console.libraries=/etc/prometheus/console_libraries \
+              --web.listen-address=0.0.0.0:9090
+            Restart=always
+            
+            [Install]
+            WantedBy=multi-user.target
+            PROMSVC
+            
+                chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
+                systemctl daemon-reload
+                systemctl enable prometheus
+                systemctl start prometheus
+                log "Prometheus installed"
+            fi
+            
+            # =============================================================================
+            # Grafana
+            # =============================================================================
+            if [ "${INSTALL_GRAFANA}" = "true" ]; then
+                log "Installing Grafana..."
+                mkdir -p /etc/apt/keyrings/
+                wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor > /etc/apt/keyrings/grafana.gpg
+                echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" > /etc/apt/sources.list.d/grafana.list
+                apt-get -y update
+                apt-get install -y grafana-enterprise=${GRAFANA_VERSION}
+            
+                cat > /etc/grafana/provisioning/datasources/prometheus.yaml << 'GRAFDS'
+            apiVersion: 1
+            datasources:
+            - name: Prometheus
+              type: prometheus
+              access: proxy
+              url: http://127.0.0.1:9090
+              isDefault: true
+            GRAFDS
+            
+                systemctl enable grafana-server
+                systemctl start grafana-server
+                log "Grafana installed"
+            fi
+            
+            # =============================================================================
+            # Docker & RedisInsight
+            # =============================================================================
+            if [ "${INSTALL_REDISINSIGHT}" = "true" ]; then
+                log "Installing Docker and RedisInsight..."
+                install -m 0755 -d /etc/apt/keyrings
+                curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+                chmod a+r /etc/apt/keyrings/docker.asc
+                echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
+                apt-get update
+                apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+                usermod -aG docker ${SSH_USER}
+            
+                systemctl enable docker
+                systemctl start docker
+                sleep 5
+            
+                docker run -d --name redisinsight --restart unless-stopped \
+                    -p 0.0.0.0:5540:5540 -v redisinsight:/data redis/redisinsight:latest
+                log "RedisInsight container started"
+            fi
+            
+            # =============================================================================
+            # Cleanup and Summary
+            # =============================================================================
+            chown -R ${SSH_USER}:${SSH_USER} "${INSTALL_DIR}"
+            chown -R ${SSH_USER}:${SSH_USER} /home/${SSH_USER}
+            
+            log "=== Bastion preparation complete ==="
+            log "Services:"
+            log "  - Prometheus: http://localhost:9090"
+            log "  - Grafana: http://localhost:3000 (admin/admin)"
+            log "  - RedisInsight: http://localhost:5540"
+            log "Redis cluster: ${CLUSTER_FQDN}"
+            
+            touch /home/${SSH_USER}/bastion_ready
+            chown ${SSH_USER}:${SSH_USER} /home/${SSH_USER}/bastion_ready
+        EOT [90m-> null[0m[0m
+      [31m-[0m[0m user_data_replace_on_change          = false [90m-> null[0m[0m
+      [31m-[0m[0m vpc_security_group_ids               = [
+          [31m-[0m[0m "sg-06dfe071148c43f1f",
+          [31m-[0m[0m "sg-0bed740e9b16e16da",
+        ] [90m-> null[0m[0m
+
+      [31m-[0m[0m capacity_reservation_specification {
+          [31m-[0m[0m capacity_reservation_preference = "open" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m cpu_options {
+          [31m-[0m[0m core_count       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m threads_per_core = 2 [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m credit_specification {
+          [31m-[0m[0m cpu_credits = "unlimited" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m enclave_options {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m maintenance_options {
+          [31m-[0m[0m auto_recovery = "default" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m metadata_options {
+          [31m-[0m[0m http_endpoint               = "enabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_protocol_ipv6          = "disabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_put_response_hop_limit = 1 [90m-> null[0m[0m
+          [31m-[0m[0m http_tokens                 = "optional" [90m-> null[0m[0m
+          [31m-[0m[0m instance_metadata_tags      = "disabled" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m primary_network_interface {
+          [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
+          [31m-[0m[0m network_interface_id  = "eni-072d67a01eb15295f" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m private_dns_name_options {
+          [31m-[0m[0m enable_resource_name_dns_a_record    = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_resource_name_dns_aaaa_record = false [90m-> null[0m[0m
+          [31m-[0m[0m hostname_type                        = "ip-name" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m root_block_device {
+          [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
+          [31m-[0m[0m device_name           = "/dev/sda1" [90m-> null[0m[0m
+          [31m-[0m[0m encrypted             = true [90m-> null[0m[0m
+          [31m-[0m[0m iops                  = 3000 [90m-> null[0m[0m
+          [31m-[0m[0m kms_key_id            = "arn:aws:kms:us-east-1:735486936198:key/7e0b81e7-5fc9-497e-bbed-2c2801c8ff78" [90m-> null[0m[0m
+          [31m-[0m[0m tags                  = {
+              [31m-[0m[0m "ManagedBy" = "terraform"
+              [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+              [31m-[0m[0m "Name"      = "redis-simple-bastion-root"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m tags_all              = {
+              [31m-[0m[0m "ManagedBy" = "terraform"
+              [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+              [31m-[0m[0m "Name"      = "redis-simple-bastion-root"
+            } [90m-> null[0m[0m
+          [31m-[0m[0m throughput            = 125 [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-01801e5f21147deaf" [90m-> null[0m[0m
+          [31m-[0m[0m volume_size           = 50 [90m-> null[0m[0m
+          [31m-[0m[0m volume_type           = "gp3" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # module.redis_enterprise.module.bastion[0].aws_security_group.bastion[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "bastion" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-east-1:735486936198:security-group/sg-06dfe071148c43f1f" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Security group for bastion host" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "All outbound traffic"
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-06dfe071148c43f1f" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "Grafana"
+              [31m-[0m[0m from_port        = 3000
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 3000
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "Prometheus"
+              [31m-[0m[0m from_port        = 9090
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 9090
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "RedisInsight"
+              [31m-[0m[0m from_port        = 5540
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 5540
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "SSH access"
+              [31m-[0m[0m from_port        = 22
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 22
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "redis-simple-bastion-sg" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "735486936198" [90m-> null[0m[0m
+      [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "ManagedBy" = "terraform"
+          [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+          [31m-[0m[0m "Name"      = "redis-simple-bastion-sg"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "ManagedBy" = "terraform"
+          [31m-[0m[0m "Module"    = "redis-enterprise-aws"
+          [31m-[0m[0m "Name"      = "redis-simple-bastion-sg"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
+    }
+
 [1m  # module.redis_enterprise.module.cluster["us-east-1"].aws_iam_instance_profile.redis[0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_iam_instance_profile" "redis" {
       [31m-[0m[0m arn         = "arn:aws:iam::735486936198:instance-profile/redis-simple-us-east-1-redis-profile" [90m-> null[0m[0m
-      [31m-[0m[0m create_date = "2026-03-03T01:16:30Z" [90m-> null[0m[0m
+      [31m-[0m[0m create_date = "2026-03-03T01:54:52Z" [90m-> null[0m[0m
       [31m-[0m[0m id          = "redis-simple-us-east-1-redis-profile" [90m-> null[0m[0m
       [31m-[0m[0m name        = "redis-simple-us-east-1-redis-profile" [90m-> null[0m[0m
       [31m-[0m[0m path        = "/" [90m-> null[0m[0m
@@ -103,7 +586,7 @@ Terraform will perform the following actions:
           [31m-[0m[0m "ManagedBy" = "terraform"
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
         } [90m-> null[0m[0m
-      [31m-[0m[0m unique_id   = "AIPA2WPTQASDBPWEHGC4X" [90m-> null[0m[0m
+      [31m-[0m[0m unique_id   = "AIPA2WPTQASDOX5WYKMSC" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.cluster["us-east-1"].aws_iam_role.redis[0m will be [1m[31mdestroyed[0m
@@ -123,7 +606,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m Version   = "2012-10-17"
             }
         ) [90m-> null[0m[0m
-      [31m-[0m[0m create_date           = "2026-03-03T01:16:29Z" [90m-> null[0m[0m
+      [31m-[0m[0m create_date           = "2026-03-03T01:54:51Z" [90m-> null[0m[0m
       [31m-[0m[0m force_detach_policies = false [90m-> null[0m[0m
       [31m-[0m[0m id                    = "redis-simple-us-east-1-redis-role" [90m-> null[0m[0m
       [31m-[0m[0m managed_policy_arns   = [] [90m-> null[0m[0m
@@ -138,7 +621,7 @@ Terraform will perform the following actions:
           [31m-[0m[0m "ManagedBy" = "terraform"
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
         } [90m-> null[0m[0m
-      [31m-[0m[0m unique_id             = "AROA2WPTQASDKVHANHD3V" [90m-> null[0m[0m
+      [31m-[0m[0m unique_id             = "AROA2WPTQASDFAFAIUZK3" [90m-> null[0m[0m
 
       [31m-[0m[0m inline_policy {
           [31m-[0m[0m name   = "redis-simple-us-east-1-redis-policy" [90m-> null[0m[0m
@@ -193,7 +676,7 @@ Terraform will perform the following actions:
 [1m  # module.redis_enterprise.module.cluster["us-east-1"].aws_instance.master[0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_instance" "master" {
       [31m-[0m[0m ami                                  = "ami-04680790a315cd58d" [90m-> null[0m[0m
-      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:instance/i-0cde69d1a3563427f" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:instance/i-0cc3ac387334403dd" [90m-> null[0m[0m
       [31m-[0m[0m associate_public_ip_address          = true [90m-> null[0m[0m
       [31m-[0m[0m availability_zone                    = "us-east-1a" [90m-> null[0m[0m
       [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
@@ -203,7 +686,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m get_password_data                    = false [90m-> null[0m[0m
       [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
       [31m-[0m[0m iam_instance_profile                 = "redis-simple-us-east-1-redis-profile" [90m-> null[0m[0m
-      [31m-[0m[0m id                                   = "i-0cde69d1a3563427f" [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "i-0cc3ac387334403dd" [90m-> null[0m[0m
       [31m-[0m[0m instance_initiated_shutdown_behavior = "stop" [90m-> null[0m[0m
       [31m-[0m[0m instance_state                       = "running" [90m-> null[0m[0m
       [31m-[0m[0m instance_type                        = "m6i.xlarge" [90m-> null[0m[0m
@@ -212,16 +695,16 @@ Terraform will perform the following actions:
       [31m-[0m[0m key_name                             = "redis-simple-us-east-1-key" [90m-> null[0m[0m
       [31m-[0m[0m monitoring                           = false [90m-> null[0m[0m
       [31m-[0m[0m placement_partition_number           = 0 [90m-> null[0m[0m
-      [31m-[0m[0m primary_network_interface_id         = "eni-06ab71d8128978f16" [90m-> null[0m[0m
-      [31m-[0m[0m private_dns                          = "ip-10-0-1-207.ec2.internal" [90m-> null[0m[0m
-      [31m-[0m[0m private_ip                           = "10.0.1.207" [90m-> null[0m[0m
-      [31m-[0m[0m public_dns                           = "ec2-35-175-202-12.compute-1.amazonaws.com" [90m-> null[0m[0m
-      [31m-[0m[0m public_ip                            = "35.175.202.12" [90m-> null[0m[0m
+      [31m-[0m[0m primary_network_interface_id         = "eni-0e137821de291ebee" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns                          = "ip-10-0-1-143.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                           = "10.0.1.143" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns                           = "ec2-54-198-52-39.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                            = "54.198.52.39" [90m-> null[0m[0m
       [31m-[0m[0m region                               = "us-east-1" [90m-> null[0m[0m
       [31m-[0m[0m secondary_private_ips                = [] [90m-> null[0m[0m
       [31m-[0m[0m security_groups                      = [] [90m-> null[0m[0m
       [31m-[0m[0m source_dest_check                    = true [90m-> null[0m[0m
-      [31m-[0m[0m subnet_id                            = "subnet-0f758faecc1d75054" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                            = "subnet-0e386d7bb8067f43e" [90m-> null[0m[0m
       [31m-[0m[0m tags                                 = {
           [31m-[0m[0m "ManagedBy" = "terraform"
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
@@ -240,7 +723,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m user_data                            = (sensitive value) [90m-> null[0m[0m
       [31m-[0m[0m user_data_replace_on_change          = false [90m-> null[0m[0m
       [31m-[0m[0m vpc_security_group_ids               = [
-          [31m-[0m[0m "sg-0a58023fa5da6b452",
+          [31m-[0m[0m "sg-0bed740e9b16e16da",
         ] [90m-> null[0m[0m
 
       [31m-[0m[0m capacity_reservation_specification {
@@ -270,7 +753,7 @@ Terraform will perform the following actions:
 
       [31m-[0m[0m primary_network_interface {
           [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
-          [31m-[0m[0m network_interface_id  = "eni-06ab71d8128978f16" [90m-> null[0m[0m
+          [31m-[0m[0m network_interface_id  = "eni-0e137821de291ebee" [90m-> null[0m[0m
         }
 
       [31m-[0m[0m private_dns_name_options {
@@ -296,7 +779,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m "Name"      = "redis-simple-us-east-1-node-0-root"
             } [90m-> null[0m[0m
           [31m-[0m[0m throughput            = 125 [90m-> null[0m[0m
-          [31m-[0m[0m volume_id             = "vol-028937a0f4ba2d638" [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-0ad8df34cc9df9652" [90m-> null[0m[0m
           [31m-[0m[0m volume_size           = 50 [90m-> null[0m[0m
           [31m-[0m[0m volume_type           = "gp3" [90m-> null[0m[0m
         }
@@ -305,7 +788,7 @@ Terraform will perform the following actions:
 [1m  # module.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_instance" "workers" {
       [31m-[0m[0m ami                                  = "ami-04680790a315cd58d" [90m-> null[0m[0m
-      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:instance/i-00fe1d543be2dfeb7" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:instance/i-0a92b660bdee3955c" [90m-> null[0m[0m
       [31m-[0m[0m associate_public_ip_address          = true [90m-> null[0m[0m
       [31m-[0m[0m availability_zone                    = "us-east-1b" [90m-> null[0m[0m
       [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
@@ -315,7 +798,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m get_password_data                    = false [90m-> null[0m[0m
       [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
       [31m-[0m[0m iam_instance_profile                 = "redis-simple-us-east-1-redis-profile" [90m-> null[0m[0m
-      [31m-[0m[0m id                                   = "i-00fe1d543be2dfeb7" [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "i-0a92b660bdee3955c" [90m-> null[0m[0m
       [31m-[0m[0m instance_initiated_shutdown_behavior = "stop" [90m-> null[0m[0m
       [31m-[0m[0m instance_state                       = "running" [90m-> null[0m[0m
       [31m-[0m[0m instance_type                        = "m6i.xlarge" [90m-> null[0m[0m
@@ -324,16 +807,16 @@ Terraform will perform the following actions:
       [31m-[0m[0m key_name                             = "redis-simple-us-east-1-key" [90m-> null[0m[0m
       [31m-[0m[0m monitoring                           = false [90m-> null[0m[0m
       [31m-[0m[0m placement_partition_number           = 0 [90m-> null[0m[0m
-      [31m-[0m[0m primary_network_interface_id         = "eni-0feb82b9482987804" [90m-> null[0m[0m
-      [31m-[0m[0m private_dns                          = "ip-10-0-2-207.ec2.internal" [90m-> null[0m[0m
-      [31m-[0m[0m private_ip                           = "10.0.2.207" [90m-> null[0m[0m
-      [31m-[0m[0m public_dns                           = "ec2-98-81-114-220.compute-1.amazonaws.com" [90m-> null[0m[0m
-      [31m-[0m[0m public_ip                            = "98.81.114.220" [90m-> null[0m[0m
+      [31m-[0m[0m primary_network_interface_id         = "eni-03b4cb579af50125c" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns                          = "ip-10-0-2-122.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                           = "10.0.2.122" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns                           = "ec2-100-53-250-55.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                            = "100.53.250.55" [90m-> null[0m[0m
       [31m-[0m[0m region                               = "us-east-1" [90m-> null[0m[0m
       [31m-[0m[0m secondary_private_ips                = [] [90m-> null[0m[0m
       [31m-[0m[0m security_groups                      = [] [90m-> null[0m[0m
       [31m-[0m[0m source_dest_check                    = true [90m-> null[0m[0m
-      [31m-[0m[0m subnet_id                            = "subnet-026ee6c84045c7e34" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                            = "subnet-09ab832ca3bccca78" [90m-> null[0m[0m
       [31m-[0m[0m tags                                 = {
           [31m-[0m[0m "ManagedBy" = "terraform"
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
@@ -352,7 +835,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m user_data                            = (sensitive value) [90m-> null[0m[0m
       [31m-[0m[0m user_data_replace_on_change          = false [90m-> null[0m[0m
       [31m-[0m[0m vpc_security_group_ids               = [
-          [31m-[0m[0m "sg-0a58023fa5da6b452",
+          [31m-[0m[0m "sg-0bed740e9b16e16da",
         ] [90m-> null[0m[0m
 
       [31m-[0m[0m capacity_reservation_specification {
@@ -382,7 +865,7 @@ Terraform will perform the following actions:
 
       [31m-[0m[0m primary_network_interface {
           [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
-          [31m-[0m[0m network_interface_id  = "eni-0feb82b9482987804" [90m-> null[0m[0m
+          [31m-[0m[0m network_interface_id  = "eni-03b4cb579af50125c" [90m-> null[0m[0m
         }
 
       [31m-[0m[0m private_dns_name_options {
@@ -408,7 +891,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m "Name"      = "redis-simple-us-east-1-node-1-root"
             } [90m-> null[0m[0m
           [31m-[0m[0m throughput            = 125 [90m-> null[0m[0m
-          [31m-[0m[0m volume_id             = "vol-0b7db4b4fe0abaa53" [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-0b9d3cfcf64e39a82" [90m-> null[0m[0m
           [31m-[0m[0m volume_size           = 50 [90m-> null[0m[0m
           [31m-[0m[0m volume_type           = "gp3" [90m-> null[0m[0m
         }
@@ -417,7 +900,7 @@ Terraform will perform the following actions:
 [1m  # module.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_instance" "workers" {
       [31m-[0m[0m ami                                  = "ami-04680790a315cd58d" [90m-> null[0m[0m
-      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:instance/i-0307c67f2094e7e75" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:instance/i-0bb229c747504e557" [90m-> null[0m[0m
       [31m-[0m[0m associate_public_ip_address          = true [90m-> null[0m[0m
       [31m-[0m[0m availability_zone                    = "us-east-1c" [90m-> null[0m[0m
       [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
@@ -427,7 +910,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m get_password_data                    = false [90m-> null[0m[0m
       [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
       [31m-[0m[0m iam_instance_profile                 = "redis-simple-us-east-1-redis-profile" [90m-> null[0m[0m
-      [31m-[0m[0m id                                   = "i-0307c67f2094e7e75" [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "i-0bb229c747504e557" [90m-> null[0m[0m
       [31m-[0m[0m instance_initiated_shutdown_behavior = "stop" [90m-> null[0m[0m
       [31m-[0m[0m instance_state                       = "running" [90m-> null[0m[0m
       [31m-[0m[0m instance_type                        = "m6i.xlarge" [90m-> null[0m[0m
@@ -436,16 +919,16 @@ Terraform will perform the following actions:
       [31m-[0m[0m key_name                             = "redis-simple-us-east-1-key" [90m-> null[0m[0m
       [31m-[0m[0m monitoring                           = false [90m-> null[0m[0m
       [31m-[0m[0m placement_partition_number           = 0 [90m-> null[0m[0m
-      [31m-[0m[0m primary_network_interface_id         = "eni-0ea7f69e0f5e92d76" [90m-> null[0m[0m
-      [31m-[0m[0m private_dns                          = "ip-10-0-3-135.ec2.internal" [90m-> null[0m[0m
-      [31m-[0m[0m private_ip                           = "10.0.3.135" [90m-> null[0m[0m
-      [31m-[0m[0m public_dns                           = "ec2-44-203-254-76.compute-1.amazonaws.com" [90m-> null[0m[0m
-      [31m-[0m[0m public_ip                            = "44.203.254.76" [90m-> null[0m[0m
+      [31m-[0m[0m primary_network_interface_id         = "eni-04678f34266eae831" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns                          = "ip-10-0-3-46.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                           = "10.0.3.46" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns                           = "ec2-13-222-233-160.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                            = "13.222.233.160" [90m-> null[0m[0m
       [31m-[0m[0m region                               = "us-east-1" [90m-> null[0m[0m
       [31m-[0m[0m secondary_private_ips                = [] [90m-> null[0m[0m
       [31m-[0m[0m security_groups                      = [] [90m-> null[0m[0m
       [31m-[0m[0m source_dest_check                    = true [90m-> null[0m[0m
-      [31m-[0m[0m subnet_id                            = "subnet-0378166623d4a75d7" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                            = "subnet-0670b87b89076f639" [90m-> null[0m[0m
       [31m-[0m[0m tags                                 = {
           [31m-[0m[0m "ManagedBy" = "terraform"
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
@@ -464,7 +947,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m user_data                            = (sensitive value) [90m-> null[0m[0m
       [31m-[0m[0m user_data_replace_on_change          = false [90m-> null[0m[0m
       [31m-[0m[0m vpc_security_group_ids               = [
-          [31m-[0m[0m "sg-0a58023fa5da6b452",
+          [31m-[0m[0m "sg-0bed740e9b16e16da",
         ] [90m-> null[0m[0m
 
       [31m-[0m[0m capacity_reservation_specification {
@@ -494,7 +977,7 @@ Terraform will perform the following actions:
 
       [31m-[0m[0m primary_network_interface {
           [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
-          [31m-[0m[0m network_interface_id  = "eni-0ea7f69e0f5e92d76" [90m-> null[0m[0m
+          [31m-[0m[0m network_interface_id  = "eni-04678f34266eae831" [90m-> null[0m[0m
         }
 
       [31m-[0m[0m private_dns_name_options {
@@ -520,7 +1003,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m "Name"      = "redis-simple-us-east-1-node-2-root"
             } [90m-> null[0m[0m
           [31m-[0m[0m throughput            = 125 [90m-> null[0m[0m
-          [31m-[0m[0m volume_id             = "vol-0d33f370000f6b4a3" [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-022d6a29d8b1cc7e6" [90m-> null[0m[0m
           [31m-[0m[0m volume_size           = 50 [90m-> null[0m[0m
           [31m-[0m[0m volume_type           = "gp3" [90m-> null[0m[0m
         }
@@ -529,12 +1012,12 @@ Terraform will perform the following actions:
 [1m  # module.redis_enterprise.module.cluster["us-east-1"].aws_key_pair.redis[0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_key_pair" "redis" {
       [31m-[0m[0m arn         = "arn:aws:ec2:us-east-1:735486936198:key-pair/redis-simple-us-east-1-key" [90m-> null[0m[0m
-      [31m-[0m[0m fingerprint = "ae:87:a5:7f:e7:87:57:32:2c:43:56:0b:23:8c:da:05" [90m-> null[0m[0m
+      [31m-[0m[0m fingerprint = "3a:01:9d:65:a3:52:68:6f:e7:89:6b:6d:06:ba:0b:ee" [90m-> null[0m[0m
       [31m-[0m[0m id          = "redis-simple-us-east-1-key" [90m-> null[0m[0m
       [31m-[0m[0m key_name    = "redis-simple-us-east-1-key" [90m-> null[0m[0m
-      [31m-[0m[0m key_pair_id = "key-0b95ec3ad9730c3e1" [90m-> null[0m[0m
+      [31m-[0m[0m key_pair_id = "key-0f6ce08de498351fa" [90m-> null[0m[0m
       [31m-[0m[0m key_type    = "rsa" [90m-> null[0m[0m
-      [31m-[0m[0m public_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCuv2VZYht/zOaxkdzUolNYQLPB510m1EWpk5PfGtaaWVDwlHc65EMPaV27aoJ20UByvrMbN7iWXuv5u+YbNnmkmToLAk8DSw91R/gShM2wXq+mfwyXsuE5amh7s3QC/5siwPEhR94Uh4dKugDLN7Fr9xmRUz5voNrl45SL0U7BZYOt62VFgJf97+JvXHYZS5oxhE9xO3ZrcNUPSxaZnGRzCmp6fVlTGkEoNrwZguAle4hjDnEZNzGV6oWgLE3EHphWritzPvNqgdHq15DASsDCwk3wLFM8v15i8Ut/udyuKfTJWx+LxDiQmtPmNHTP5K9lLP7/Yw160v7T4optM6th5JnySD1U0EcvwGn+l60DtzsW0QbmYq+fW6Ptae7CWdQFiyvTQ77Zsdsjwerq8w3tU9umaSMiTPnsEt0hMzMjla9TAadVQgbNvS1Mn2JX+mVSQLHeHZZFhnyiYyaoB7pdXm3tektGWeNblzJ2e0XmuEFfH0732uz23iBgKxWHGtyjBewN0AyeuU+KzlqmYzl/weprnGmifqgZ60K3vf8Q1XsSWaQkJ94IIm/3TSy7G3124XvQUZ4snB379Z/vuvUzriAyndxBw1JVQrOx3bPTKLgGFyNzBDehoXcqRxndGsKbBErZzfOuFzVIgWl2G8qEPC3qGLhHtg0rNr5oxwra8Q==" [90m-> null[0m[0m
+      [31m-[0m[0m public_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDk8d1zIUK58Y6Z+aNfK3b4TfA0yHdQX7xN12PCnqVSnFKYY/TBDq8WsviRGXZ4BrVNj/TumnzdZECofRfZySjCuAc3EDMmrGv87vVgpIAwIJMhcRWkb47tykIkFajES6JbqRRzVlIZKbusxb37jW3fFKB0/tOy/ladHZ4tc60XExJnExvR0smdtttGPalYqQT6ZCy2eqZecx5OocC0hkHF+9mLBBDrwLIFbb5wQjDmS6wgBZwobnRyk99N68Y/lg1Y7LPKDCHUUFZfNZRtP8uqUQGYxUptHnPVEHqNulo94nCTpkngFAL1wWyzLwG62ybdijOeZiBCNWGLebVEdmKf5MQChhsah629pDqVGlRJNObxSOT+BpdCZXEFnpDfladgWoVy4WO74ZNpLmUrM+43S8q0AkachFXogR1UExuV4j0bFcc+wP7utszh0pqb0bo8EDlv0yoW15H+NvtzHjdXgEE7bqBX8doavunliUnPDnVzQZccDk2o9bU0QAU9R+bcpgJjltoRjzhPQ4y2E/Mu6NCXvFs0eutg+t6GMeWdn/l8cXf0px0gzQWUclIynxdDc+WvA3pl1Ni9xrWbYCgHnBNSDuz4hAG/kSbum3/rx0jMARG2JixNRj1TPHaLKc5liV6YaUuKkgEkxyGYICLrSpdfMQbMNTBwIPCQEctcIw==" [90m-> null[0m[0m
       [31m-[0m[0m region      = "us-east-1" [90m-> null[0m[0m
       [31m-[0m[0m tags        = {
           [31m-[0m[0m "ManagedBy" = "terraform"
@@ -546,10 +1029,15 @@ Terraform will perform the following actions:
         } [90m-> null[0m[0m
     }
 
+[1m  # module.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "null_resource" "wait_for_cluster" {
+      [31m-[0m[0m id = "1851126940849095990" [90m-> null[0m[0m
+    }
+
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_internet_gateway.main[0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_internet_gateway" "main" {
-      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:735486936198:internet-gateway/igw-02b60c0573cdab800" [90m-> null[0m[0m
-      [31m-[0m[0m id       = "igw-02b60c0573cdab800" [90m-> null[0m[0m
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:735486936198:internet-gateway/igw-09450f58fefbe65aa" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-09450f58fefbe65aa" [90m-> null[0m[0m
       [31m-[0m[0m owner_id = "735486936198" [90m-> null[0m[0m
       [31m-[0m[0m region   = "us-east-1" [90m-> null[0m[0m
       [31m-[0m[0m tags     = {
@@ -562,13 +1050,13 @@ Terraform will perform the following actions:
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
           [31m-[0m[0m "Name"      = "redis-simple-us-east-1-igw"
         } [90m-> null[0m[0m
-      [31m-[0m[0m vpc_id   = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_route_table.public[0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_route_table" "public" {
-      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:735486936198:route-table/rtb-0c0e6c83d1e989d1e" [90m-> null[0m[0m
-      [31m-[0m[0m id               = "rtb-0c0e6c83d1e989d1e" [90m-> null[0m[0m
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:735486936198:route-table/rtb-0f8fd6eee87848fc1" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-0f8fd6eee87848fc1" [90m-> null[0m[0m
       [31m-[0m[0m owner_id         = "735486936198" [90m-> null[0m[0m
       [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
       [31m-[0m[0m region           = "us-east-1" [90m-> null[0m[0m
@@ -579,7 +1067,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m core_network_arn           = ""
               [31m-[0m[0m destination_prefix_list_id = ""
               [31m-[0m[0m egress_only_gateway_id     = ""
-              [31m-[0m[0m gateway_id                 = "igw-02b60c0573cdab800"
+              [31m-[0m[0m gateway_id                 = "igw-09450f58fefbe65aa"
               [31m-[0m[0m ipv6_cidr_block            = ""
               [31m-[0m[0m local_gateway_id           = ""
               [31m-[0m[0m nat_gateway_id             = ""
@@ -599,44 +1087,44 @@ Terraform will perform the following actions:
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
           [31m-[0m[0m "Name"      = "redis-simple-us-east-1-public-rt"
         } [90m-> null[0m[0m
-      [31m-[0m[0m vpc_id           = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_route_table_association" "bastion" {
-      [31m-[0m[0m id             = "rtbassoc-0a6cf62a7dcba6507" [90m-> null[0m[0m
+      [31m-[0m[0m id             = "rtbassoc-07dfa1eb2411a3c5f" [90m-> null[0m[0m
       [31m-[0m[0m region         = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m route_table_id = "rtb-0c0e6c83d1e989d1e" [90m-> null[0m[0m
-      [31m-[0m[0m subnet_id      = "subnet-0106630a5ec8d1ad3" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0f8fd6eee87848fc1" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-03b2d7aa8283c42d5" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
-      [31m-[0m[0m id             = "rtbassoc-0d93b972e051930fd" [90m-> null[0m[0m
+      [31m-[0m[0m id             = "rtbassoc-0eb4cc5d25eca628c" [90m-> null[0m[0m
       [31m-[0m[0m region         = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m route_table_id = "rtb-0c0e6c83d1e989d1e" [90m-> null[0m[0m
-      [31m-[0m[0m subnet_id      = "subnet-0f758faecc1d75054" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0f8fd6eee87848fc1" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-0e386d7bb8067f43e" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
-      [31m-[0m[0m id             = "rtbassoc-022dd8357987d565d" [90m-> null[0m[0m
+      [31m-[0m[0m id             = "rtbassoc-0313b43959d6bc0fb" [90m-> null[0m[0m
       [31m-[0m[0m region         = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m route_table_id = "rtb-0c0e6c83d1e989d1e" [90m-> null[0m[0m
-      [31m-[0m[0m subnet_id      = "subnet-026ee6c84045c7e34" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0f8fd6eee87848fc1" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-09ab832ca3bccca78" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1c"][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
-      [31m-[0m[0m id             = "rtbassoc-05d27e5f3652d4ff6" [90m-> null[0m[0m
+      [31m-[0m[0m id             = "rtbassoc-0abd19a7855826c87" [90m-> null[0m[0m
       [31m-[0m[0m region         = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m route_table_id = "rtb-0c0e6c83d1e989d1e" [90m-> null[0m[0m
-      [31m-[0m[0m subnet_id      = "subnet-0378166623d4a75d7" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0f8fd6eee87848fc1" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-0670b87b89076f639" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_security_group.redis[0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_security_group" "redis" {
-      [31m-[0m[0m arn                    = "arn:aws:ec2:us-east-1:735486936198:security-group/sg-0a58023fa5da6b452" [90m-> null[0m[0m
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-east-1:735486936198:security-group/sg-0bed740e9b16e16da" [90m-> null[0m[0m
       [31m-[0m[0m description            = "Security group for Redis Enterprise cluster" [90m-> null[0m[0m
       [31m-[0m[0m egress                 = [
           [31m-[0m[0m {
@@ -653,7 +1141,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m to_port          = 0
             },
         ] [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
       [31m-[0m[0m ingress                = [
           [31m-[0m[0m {
               [31m-[0m[0m cidr_blocks      = [
@@ -759,7 +1247,7 @@ Terraform will perform the following actions:
           [31m-[0m[0m "Module"    = "redis-enterprise-aws"
           [31m-[0m[0m "Name"      = "redis-simple-us-east-1-redis-sg"
         } [90m-> null[0m[0m
-      [31m-[0m[0m vpc_id                 = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui[0m will be [1m[31mdestroyed[0m
@@ -769,11 +1257,11 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m description            = "Redis Enterprise Admin UI" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 8443 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-3016074521" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-3113838132" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "tcp" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-04827ca814ca3324d" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-0d7a2e6a9165faa99" [90m-> null[0m[0m
       [31m-[0m[0m self                   = false [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 8443 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "ingress" [90m-> null[0m[0m
@@ -786,11 +1274,11 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m description            = "Database ports" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 10000 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-3413184527" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-3912684470" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "tcp" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-08d3f3b9246c5fb14" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-06d3751fc61293697" [90m-> null[0m[0m
       [31m-[0m[0m self                   = false [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 19999 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "ingress" [90m-> null[0m[0m
@@ -803,11 +1291,11 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m description            = "Discovery service" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 8001 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-3083085855" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-3180915506" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "tcp" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-004e0073bb6c328ec" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-07387887eb8042be8" [90m-> null[0m[0m
       [31m-[0m[0m self                   = false [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 8001 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "ingress" [90m-> null[0m[0m
@@ -820,11 +1308,11 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m description            = "Allow all outbound traffic" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 0 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-3407993035" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-1659983100" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "-1" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-0d02171d3dcdce396" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-0c7df0c52eeeec667" [90m-> null[0m[0m
       [31m-[0m[0m self                   = false [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 0 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "egress" [90m-> null[0m[0m
@@ -834,11 +1322,11 @@ Terraform will perform the following actions:
 [0m  [31m-[0m[0m resource "aws_security_group_rule" "internal" {
       [31m-[0m[0m description            = "Allow all internal cluster traffic" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 0 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-2469760565" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-2980197341" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "-1" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-0340ee00117e7de4b" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-083f8c8bf56b1740c" [90m-> null[0m[0m
       [31m-[0m[0m self                   = true [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 0 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "ingress" [90m-> null[0m[0m
@@ -851,11 +1339,11 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m description            = "Metrics endpoints" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 8070 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-2947654827" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-2783799174" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "tcp" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-0ac8d5b6866531235" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-02380498affac063e" [90m-> null[0m[0m
       [31m-[0m[0m self                   = false [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 8071 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "ingress" [90m-> null[0m[0m
@@ -868,11 +1356,11 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m description            = "Redis Enterprise REST API" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 9443 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-747879410" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-651131103" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "tcp" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-099f41dea0f8e1dd0" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-0759c33b2c3542e27" [90m-> null[0m[0m
       [31m-[0m[0m self                   = false [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 9443 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "ingress" [90m-> null[0m[0m
@@ -885,11 +1373,11 @@ Terraform will perform the following actions:
         ] [90m-> null[0m[0m
       [31m-[0m[0m description            = "SSH access" [90m-> null[0m[0m
       [31m-[0m[0m from_port              = 22 [90m-> null[0m[0m
-      [31m-[0m[0m id                     = "sgrule-2694578324" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sgrule-254491582" [90m-> null[0m[0m
       [31m-[0m[0m protocol               = "tcp" [90m-> null[0m[0m
       [31m-[0m[0m region                 = "us-east-1" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_id      = "sg-0a58023fa5da6b452" [90m-> null[0m[0m
-      [31m-[0m[0m security_group_rule_id = "sgr-08d68e4e296b2d36b" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_id      = "sg-0bed740e9b16e16da" [90m-> null[0m[0m
+      [31m-[0m[0m security_group_rule_id = "sgr-060627a1936cdd4cb" [90m-> null[0m[0m
       [31m-[0m[0m self                   = false [90m-> null[0m[0m
       [31m-[0m[0m to_port                = 22 [90m-> null[0m[0m
       [31m-[0m[0m type                   = "ingress" [90m-> null[0m[0m
@@ -897,7 +1385,7 @@ Terraform will perform the following actions:
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_subnet" "bastion" {
-      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-0106630a5ec8d1ad3" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-03b2d7aa8283c42d5" [90m-> null[0m[0m
       [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
       [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
       [31m-[0m[0m availability_zone_id                           = "use1-az6" [90m-> null[0m[0m
@@ -906,7 +1394,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
-      [31m-[0m[0m id                                             = "subnet-0106630a5ec8d1ad3" [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-03b2d7aa8283c42d5" [90m-> null[0m[0m
       [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
       [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
       [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
@@ -925,12 +1413,12 @@ Terraform will perform the following actions:
           [31m-[0m[0m "Name"      = "redis-simple-us-east-1-bastion"
           [31m-[0m[0m "Type"      = "bastion"
         } [90m-> null[0m[0m
-      [31m-[0m[0m vpc_id                                         = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_subnet" "public" {
-      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-0f758faecc1d75054" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-0e386d7bb8067f43e" [90m-> null[0m[0m
       [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
       [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
       [31m-[0m[0m availability_zone_id                           = "use1-az6" [90m-> null[0m[0m
@@ -939,7 +1427,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
-      [31m-[0m[0m id                                             = "subnet-0f758faecc1d75054" [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0e386d7bb8067f43e" [90m-> null[0m[0m
       [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
       [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
       [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
@@ -958,12 +1446,12 @@ Terraform will perform the following actions:
           [31m-[0m[0m "Name"      = "redis-simple-us-east-1-public-us-east-1a"
           [31m-[0m[0m "Type"      = "public"
         } [90m-> null[0m[0m
-      [31m-[0m[0m vpc_id                                         = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_subnet" "public" {
-      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-026ee6c84045c7e34" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-09ab832ca3bccca78" [90m-> null[0m[0m
       [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
       [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
       [31m-[0m[0m availability_zone_id                           = "use1-az1" [90m-> null[0m[0m
@@ -972,7 +1460,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
-      [31m-[0m[0m id                                             = "subnet-026ee6c84045c7e34" [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-09ab832ca3bccca78" [90m-> null[0m[0m
       [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
       [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
       [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
@@ -991,12 +1479,12 @@ Terraform will perform the following actions:
           [31m-[0m[0m "Name"      = "redis-simple-us-east-1-public-us-east-1b"
           [31m-[0m[0m "Type"      = "public"
         } [90m-> null[0m[0m
-      [31m-[0m[0m vpc_id                                         = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1c"][0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_subnet" "public" {
-      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-0378166623d4a75d7" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:735486936198:subnet/subnet-0670b87b89076f639" [90m-> null[0m[0m
       [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
       [31m-[0m[0m availability_zone                              = "us-east-1c" [90m-> null[0m[0m
       [31m-[0m[0m availability_zone_id                           = "use1-az2" [90m-> null[0m[0m
@@ -1005,7 +1493,7 @@ Terraform will perform the following actions:
       [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
       [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
-      [31m-[0m[0m id                                             = "subnet-0378166623d4a75d7" [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0670b87b89076f639" [90m-> null[0m[0m
       [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
       [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
       [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
@@ -1024,25 +1512,25 @@ Terraform will perform the following actions:
           [31m-[0m[0m "Name"      = "redis-simple-us-east-1-public-us-east-1c"
           [31m-[0m[0m "Type"      = "public"
         } [90m-> null[0m[0m
-      [31m-[0m[0m vpc_id                                         = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
     }
 
 [1m  # module.redis_enterprise.module.network["us-east-1"].aws_vpc.main[0m will be [1m[31mdestroyed[0m
 [0m  [31m-[0m[0m resource "aws_vpc" "main" {
-      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:vpc/vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:735486936198:vpc/vpc-030ae8b960eff81ad" [90m-> null[0m[0m
       [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
       [31m-[0m[0m cidr_block                           = "10.0.0.0/16" [90m-> null[0m[0m
-      [31m-[0m[0m default_network_acl_id               = "acl-0a55c51147901c8e0" [90m-> null[0m[0m
-      [31m-[0m[0m default_route_table_id               = "rtb-03d8f5117df7fc45c" [90m-> null[0m[0m
-      [31m-[0m[0m default_security_group_id            = "sg-0cd2ffadfba98c179" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-0e4269903f7790f1d" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-0571422d2717e02fc" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-0c3269778c6a6392f" [90m-> null[0m[0m
       [31m-[0m[0m dhcp_options_id                      = "dopt-1521da70" [90m-> null[0m[0m
       [31m-[0m[0m enable_dns_hostnames                 = true [90m-> null[0m[0m
       [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
       [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
-      [31m-[0m[0m id                                   = "vpc-0d43c31bdd130d61c" [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-030ae8b960eff81ad" [90m-> null[0m[0m
       [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
       [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
-      [31m-[0m[0m main_route_table_id                  = "rtb-03d8f5117df7fc45c" [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-0571422d2717e02fc" [90m-> null[0m[0m
       [31m-[0m[0m owner_id                             = "735486936198" [90m-> null[0m[0m
       [31m-[0m[0m region                               = "us-east-1" [90m-> null[0m[0m
       [31m-[0m[0m tags                                 = {
@@ -1057,86 +1545,101 @@ Terraform will perform the following actions:
         } [90m-> null[0m[0m
     }
 
-[1mPlan:[0m 0 to add, 0 to change, 29 to destroy.
+[1mPlan:[0m 0 to add, 0 to change, 34 to destroy.
 [0m
 Changes to Outputs:
-  [31m-[0m[0m admin_credentials = (sensitive value) [90m-> null[0m[0m
-  [31m-[0m[0m admin_ui_urls     = {
-      [31m-[0m[0m us-east-1 = "https://35.175.202.12:8443"
+  [31m-[0m[0m admin_credentials   = (sensitive value) [90m-> null[0m[0m
+  [31m-[0m[0m admin_ui_urls       = {
+      [31m-[0m[0m us-east-1 = "https://54.198.52.39:8443"
     } [90m-> null[0m[0m
-  [31m-[0m[0m ssh_private_key   = (sensitive value) [90m-> null[0m[0m
+  [31m-[0m[0m bastion_ssh_command = "ssh -i <key-file> ubuntu@3.213.36.223" [90m-> null[0m[0m
+  [31m-[0m[0m ssh_private_key     = (sensitive value) [90m-> null[0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_eip_association.bastion: Destroying... [id=eipassoc-0fda3136adc4fddeb][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_eip_association.bastion: Destruction complete after 2s[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_eip.bastion: Destroying... [id=eipalloc-0b4978ba5b5ed6e91][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Destroying... [id=i-0dd4c35eba3c1ef1a][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_eip.bastion: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Still destroying... [id=i-0dd4c35eba3c1ef1a, 10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Still destroying... [id=i-0dd4c35eba3c1ef1a, 20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Still destroying... [id=i-0dd4c35eba3c1ef1a, 30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Still destroying... [id=i-0dd4c35eba3c1ef1a, 40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Still destroying... [id=i-0dd4c35eba3c1ef1a, 50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_instance.bastion: Destruction complete after 51s[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_security_group.bastion: Destroying... [id=sg-06dfe071148c43f1f][0m[0m
+[0m[1mmodule.redis_enterprise.module.bastion[0].aws_security_group.bastion: Destruction complete after 1s[0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role_policy.redis: Destroying... [id=redis-simple-us-east-1-redis-role:redis-simple-us-east-1-redis-policy][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Destroying... [id=i-0307c67f2094e7e75][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Destroying... [id=i-00fe1d543be2dfeb7][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role_policy.redis: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 10s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0307c67f2094e7e75, 10s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0307c67f2094e7e75, 20s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 20s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Destruction complete after 20s[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 30s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 40s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 50s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 1m0s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 1m10s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-00fe1d543be2dfeb7, 1m20s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Destruction complete after 1m21s[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Destroying... [id=i-0cde69d1a3563427f][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cde69d1a3563427f, 10s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cde69d1a3563427f, 20s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cde69d1a3563427f, 30s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cde69d1a3563427f, 40s elapsed][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Destruction complete after 41s[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_key_pair.redis: Destroying... [id=redis-simple-us-east-1-key][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Destroying... [id=1851126940849095990][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].null_resource.wait_for_cluster[0]: Destruction complete after 0s[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Destroying... [id=i-0a92b660bdee3955c][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Destroying... [id=i-0bb229c747504e557][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role_policy.redis: Destruction complete after 0s[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-0a92b660bdee3955c, 10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0bb229c747504e557, 10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0bb229c747504e557, 20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Still destroying... [id=i-0a92b660bdee3955c, 20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[0]: Destruction complete after 20s[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0bb229c747504e557, 30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0bb229c747504e557, 40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0bb229c747504e557, 50s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0bb229c747504e557, 1m0s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Still destroying... [id=i-0bb229c747504e557, 1m10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.workers[1]: Destruction complete after 1m11s[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Destroying... [id=i-0cc3ac387334403dd][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cc3ac387334403dd, 10s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cc3ac387334403dd, 20s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cc3ac387334403dd, 30s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Still destroying... [id=i-0cc3ac387334403dd, 40s elapsed][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_instance.master: Destruction complete after 40s[0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_instance_profile.redis: Destroying... [id=redis-simple-us-east-1-redis-profile][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_key_pair.redis: Destroying... [id=redis-simple-us-east-1-key][0m[0m
 [0m[1mmodule.redis_enterprise.random_password.redis_admin[0]: Destroying... [id=none][0m[0m
 [0m[1mmodule.redis_enterprise.random_password.redis_admin[0]: Destruction complete after 0s[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_key_pair.redis: Destruction complete after 0s[0m
-[0m[1mmodule.redis_enterprise.tls_private_key.generated[0]: Destroying... [id=39fea6ce58a6d155f7ab0a6190122dcb33c21738][0m[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_key_pair.redis: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.tls_private_key.generated[0]: Destroying... [id=c555a17430ae89d504b4fe7fc34654424ffd75dc][0m[0m
 [0m[1mmodule.redis_enterprise.tls_private_key.generated[0]: Destruction complete after 0s[0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_instance_profile.redis: Destruction complete after 1s[0m
 [0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role.redis: Destroying... [id=redis-simple-us-east-1-redis-role][0m[0m
-[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role.redis: Destruction complete after 0s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0]: Destroying... [id=rtbassoc-0a6cf62a7dcba6507][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.egress: Destroying... [id=sgrule-3407993035][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.internal: Destroying... [id=sgrule-2469760565][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.ssh: Destroying... [id=sgrule-2694578324][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.metrics: Destroying... [id=sgrule-2947654827][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"]: Destroying... [id=rtbassoc-022dd8357987d565d][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.database: Destroying... [id=sgrule-3413184527][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"]: Destroying... [id=rtbassoc-0d93b972e051930fd][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.discovery: Destroying... [id=sgrule-3083085855][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui: Destroying... [id=sgrule-3016074521][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"]: Destruction complete after 0s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.rest_api: Destroying... [id=sgrule-747879410][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0]: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"]: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1c"]: Destroying... [id=rtbassoc-05d27e5f3652d4ff6][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0]: Destroying... [id=subnet-0106630a5ec8d1ad3][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.database: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.module.cluster["us-east-1"].aws_iam_role.redis: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1c"]: Destroying... [id=rtbassoc-0abd19a7855826c87][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.discovery: Destroying... [id=sgrule-3180915506][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui: Destroying... [id=sgrule-3113838132][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.database: Destroying... [id=sgrule-3912684470][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0]: Destroying... [id=rtbassoc-07dfa1eb2411a3c5f][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.rest_api: Destroying... [id=sgrule-651131103][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"]: Destroying... [id=rtbassoc-0313b43959d6bc0fb][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.internal: Destroying... [id=sgrule-2980197341][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.ssh: Destroying... [id=sgrule-254491582][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.metrics: Destroying... [id=sgrule-2783799174][0m[0m
 [0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1c"]: Destruction complete after 0s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1c"]: Destroying... [id=subnet-0378166623d4a75d7][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table.public: Destroying... [id=rtb-0c0e6c83d1e989d1e][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0]: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"]: Destroying... [id=subnet-026ee6c84045c7e34][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"]: Destroying... [id=rtbassoc-0eb4cc5d25eca628c][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.bastion[0]: Destruction complete after 0s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.egress: Destroying... [id=sgrule-1659983100][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.discovery: Destruction complete after 0s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0]: Destroying... [id=subnet-03b2d7aa8283c42d5][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1b"]: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table_association.public["us-east-1a"]: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"]: Destroying... [id=subnet-0e386d7bb8067f43e][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1c"]: Destroying... [id=subnet-0670b87b89076f639][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.ssh: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table.public: Destroying... [id=rtb-0f8fd6eee87848fc1][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.bastion[0]: Destruction complete after 0s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"]: Destroying... [id=subnet-09ab832ca3bccca78][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"]: Destruction complete after 0s[0m
 [0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1c"]: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"]: Destroying... [id=subnet-0f758faecc1d75054][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"]: Destruction complete after 1s[0m
 [0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_route_table.public: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_internet_gateway.main: Destroying... [id=igw-02b60c0573cdab800][0m[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1b"]: Destruction complete after 0s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui: Destruction complete after 2s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_subnet.public["us-east-1a"]: Destruction complete after 1s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_internet_gateway.main: Destroying... [id=igw-09450f58fefbe65aa][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.internal: Destruction complete after 2s[0m
 [0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_internet_gateway.main: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.discovery: Destruction complete after 3s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.ssh: Destruction complete after 4s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.egress: Destruction complete after 5s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.metrics: Destruction complete after 6s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.internal: Destruction complete after 7s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.rest_api: Destruction complete after 8s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group.redis: Destroying... [id=sg-0a58023fa5da6b452][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.metrics: Destruction complete after 3s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.database: Destruction complete after 4s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.admin_ui: Destruction complete after 5s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.rest_api: Destruction complete after 6s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group_rule.egress: Destruction complete after 6s[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group.redis: Destroying... [id=sg-0bed740e9b16e16da][0m[0m
 [0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_security_group.redis: Destruction complete after 1s[0m
-[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_vpc.main: Destroying... [id=vpc-0d43c31bdd130d61c][0m[0m
+[0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_vpc.main: Destroying... [id=vpc-030ae8b960eff81ad][0m[0m
 [0m[1mmodule.redis_enterprise.module.network["us-east-1"].aws_vpc.main: Destruction complete after 1s[0m
 [0m[1m[32m
-Destroy complete! Resources: 29 destroyed.
+Destroy complete! Resources: 34 destroyed.
 [0m

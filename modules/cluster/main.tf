@@ -105,6 +105,19 @@ resource "aws_iam_instance_profile" "redis" {
 # Placement Group (for low-latency deployments)
 # -----------------------------------------------------------------------------
 
+# Validate that cluster placement group is not used with rack_aware = true
+# Cluster placement groups are restricted to a single Availability Zone
+resource "terraform_data" "placement_group_validation" {
+  count = var.placement_group_strategy == "cluster" && var.rack_aware ? 1 : 0
+
+  lifecycle {
+    precondition {
+      condition     = !(var.placement_group_strategy == "cluster" && var.rack_aware)
+      error_message = "placement_group_strategy = 'cluster' requires rack_aware = false because cluster placement groups are restricted to a single Availability Zone."
+    }
+  }
+}
+
 resource "aws_placement_group" "cluster" {
   count    = var.placement_group_strategy != "none" ? 1 : 0
   name     = "${var.name}-placement"
@@ -135,7 +148,7 @@ resource "aws_instance" "master" {
   subnet_id              = local.az_to_subnet[local.node_azs[0]]
   vpc_security_group_ids = [var.security_group_id]
   iam_instance_profile   = aws_iam_instance_profile.redis.name
-  placement_group        = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].id : null
+  placement_group        = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].name : null
 
   associate_public_ip_address = !var.private_cluster
 
@@ -186,7 +199,7 @@ resource "aws_instance" "workers" {
   subnet_id              = local.az_to_subnet[local.node_azs[count.index + 1]]
   vpc_security_group_ids = [var.security_group_id]
   iam_instance_profile   = aws_iam_instance_profile.redis.name
-  placement_group        = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].id : null
+  placement_group        = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].name : null
 
   associate_public_ip_address = !var.private_cluster
 
