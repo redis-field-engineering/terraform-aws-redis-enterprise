@@ -33,7 +33,7 @@ output "subnet_ids" {
   value = var.private_network ? {
     for az, subnet in aws_subnet.private :
     az => subnet.id
-  } : {
+    } : {
     for az, subnet in aws_subnet.public :
     az => subnet.id
   }

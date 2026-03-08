@@ -125,6 +125,9 @@ variable "placement_group_strategy" {
 
     Note: "cluster" strategy provides lowest network latency but reduces
     fault tolerance (all nodes affected by single rack failure).
+
+    Important: "cluster" strategy requires rack_aware = false because
+    cluster placement groups are restricted to a single Availability Zone.
   EOT
   type        = string
   default     = "none"

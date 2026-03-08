@@ -130,17 +130,17 @@ resource "aws_instance" "bastion" {
   }
 
   user_data = templatefile("${path.module}/templates/prepare_client.sh.tpl", {
-    ssh_user           = var.ssh_user
-    cluster_fqdn       = var.cluster_fqdn
-    memtier_url        = var.memtier_url
-    prometheus_url     = var.prometheus_url
-    grafana_version    = var.grafana_version
-    java_version       = var.java_version
-    install_memtier    = var.tools.memtier
-    install_prometheus = var.tools.prometheus
-    install_grafana    = var.tools.grafana
+    ssh_user             = var.ssh_user
+    cluster_fqdn         = var.cluster_fqdn
+    memtier_url          = var.memtier_url
+    prometheus_url       = var.prometheus_url
+    grafana_version      = var.grafana_version
+    java_version         = var.java_version
+    install_memtier      = var.tools.memtier
+    install_prometheus   = var.tools.prometheus
+    install_grafana      = var.tools.grafana
     install_redisinsight = var.tools.redisinsight
-    install_redis_cli  = var.tools.redis_cli
+    install_redis_cli    = var.tools.redis_cli
   })
 
   tags = merge(var.tags, {
