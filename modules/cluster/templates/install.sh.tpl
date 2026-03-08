@@ -132,16 +132,41 @@ echo "$${INTERNAL_IP} redis-node-$${NODE_INDEX}" >> /etc/hosts
 # =============================================================================
 # Note: rladmin has parsing issues in Redis Enterprise 8.x, so we use the REST API instead
 
+# JSON-escape credentials to handle special characters (", \, control chars)
+ESCAPED_USERNAME=$(printf '%s' "$${REDIS_ADMIN_USER}" | jq -Rs '.')
+ESCAPED_PASSWORD=$(printf '%s' "$${REDIS_ADMIN_PASSWORD}" | jq -Rs '.')
+
+# Build identity object with optional fields
+build_identity_json() {
+    local parts=()
+    if [ "$${EXTERNAL_IP}" != "none" ]; then
+        parts+=("\"external_addr\": [\"$${EXTERNAL_IP}\"]")
+    fi
+    if [ -n "$${RACK_ID}" ]; then
+        parts+=("\"rack_id\": \"$${RACK_ID}\"")
+    fi
+    # Join parts with comma
+    local IFS=','
+    echo "{$${parts[*]}}"
+}
+
+IDENTITY_JSON=$(build_identity_json)
+
 if [ "$${IS_MASTER}" = "true" ]; then
-    log "Creating new cluster: ${cluster_fqdn} via REST API"
+    log "Creating new cluster: $${CLUSTER_FQDN} via REST API"
+
+    # Build cluster object with optional rack_aware
+    if [ -n "$${RACK_ID}" ]; then
+        CLUSTER_JSON="{\"name\": \"$${CLUSTER_FQDN}\", \"rack_aware\": true}"
+    else
+        CLUSTER_JSON="{\"name\": \"$${CLUSTER_FQDN}\"}"
+    fi
 
     # Build JSON payload for cluster creation
     CREATE_PAYLOAD=$(cat <<EOJSON
 {
   "action": "create_cluster",
-  "cluster": {
-    "name": "${cluster_fqdn}"
-  },
+  "cluster": $CLUSTER_JSON,
   "node": {
     "paths": {
 %{ if flash_enabled ~}
@@ -153,28 +178,28 @@ if [ "$${IS_MASTER}" = "true" ]; then
 %{ if flash_enabled ~}
     "bigstore_enabled": true,
 %{ endif ~}
-    "identity": {
-      "external_addr": ["$${EXTERNAL_IP}"]
-    }
+    "identity": $IDENTITY_JSON
   },
   "credentials": {
-    "username": "${redis_admin_user}",
-    "password": "${redis_admin_password}"
+    "username": $ESCAPED_USERNAME,
+    "password": $ESCAPED_PASSWORD
   }
 }
 EOJSON
 )
 
     log "Sending bootstrap request..."
-    curl -sk -X POST -H "Content-Type: application/json" -d "$CREATE_PAYLOAD" https://localhost:9443/v1/bootstrap/create_cluster 2>&1 | tee -a "$LOG_FILE"
+    curl -sk -X POST -H "Content-Type: application/json" -d "$CREATE_PAYLOAD" https://localhost:9443/v1/bootstrap/create_cluster 2>&1 | tee -a "$LOG_FILE" || true
 
     # Wait for bootstrap to complete
     log "Waiting for cluster creation to complete..."
+    BOOTSTRAP_COMPLETED=false
     for i in $(seq 1 60); do
-        STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "unknown"')
+        STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "unknown"' || echo "unknown")
         log "Bootstrap state: $STATE"
-        if [ "$STATE" = "completed" ] || [ "$STATE" = "null" ] || [ -z "$STATE" ]; then
+        if [ "$STATE" = "completed" ]; then
             log "Cluster creation completed"
+            BOOTSTRAP_COMPLETED=true
             break
         fi
         if [ "$STATE" = "error" ]; then
@@ -182,10 +207,17 @@ EOJSON
             curl -sk https://localhost:9443/v1/bootstrap 2>&1 | tee -a "$LOG_FILE"
             exit 1
         fi
+        # Continue polling for unknown/empty/idle states
         sleep 5
     done
+
+    if [ "$BOOTSTRAP_COMPLETED" != "true" ]; then
+        log "ERROR: Cluster creation timed out after 5 minutes!"
+        curl -sk https://localhost:9443/v1/bootstrap 2>&1 | tee -a "$LOG_FILE"
+        exit 1
+    fi
 else
-    log "Joining cluster at ${master_ip} via REST API"
+    log "Joining cluster at $${MASTER_IP} via REST API"
     max_retries=20
     retry_delay=30
 
@@ -194,7 +226,7 @@ else
 {
   "action": "join_cluster",
   "cluster": {
-    "nodes": ["${master_ip}"]
+    "nodes": ["$${MASTER_IP}"]
   },
   "node": {
     "paths": {
@@ -207,35 +239,36 @@ else
 %{ if flash_enabled ~}
     "bigstore_enabled": true,
 %{ endif ~}
-    "identity": {
-      "external_addr": ["$${EXTERNAL_IP}"]
-    }
+    "identity": $IDENTITY_JSON
   },
   "credentials": {
-    "username": "${redis_admin_user}",
-    "password": "${redis_admin_password}"
+    "username": $ESCAPED_USERNAME,
+    "password": $ESCAPED_PASSWORD
   }
 }
 EOJSON
 )
 
+    JOIN_COMPLETED=false
     for i in $(seq 1 $max_retries); do
         log "Join attempt $i/$max_retries..."
 
         # Check if already part of cluster
-        STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "idle"')
-        if [ "$STATE" = "completed" ] || [ "$STATE" = "null" ] || [ -z "$STATE" ]; then
+        STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "idle"' || echo "idle")
+        if [ "$STATE" = "completed" ]; then
             log "Already joined cluster"
+            JOIN_COMPLETED=true
             break
         fi
 
-        curl -sk -X POST -H "Content-Type: application/json" -d "$JOIN_PAYLOAD" https://localhost:9443/v1/bootstrap/join_cluster 2>&1 | tee -a "$LOG_FILE"
+        curl -sk -X POST -H "Content-Type: application/json" -d "$JOIN_PAYLOAD" https://localhost:9443/v1/bootstrap/join_cluster 2>&1 | tee -a "$LOG_FILE" || true
 
         # Wait for join to complete
         for j in $(seq 1 30); do
-            STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "unknown"')
-            if [ "$STATE" = "completed" ] || [ "$STATE" = "null" ] || [ -z "$STATE" ]; then
+            STATE=$(curl -sk https://localhost:9443/v1/bootstrap 2>/dev/null | jq -r '.bootstrap_status.state // "unknown"' || echo "unknown")
+            if [ "$STATE" = "completed" ]; then
                 log "Successfully joined cluster"
+                JOIN_COMPLETED=true
                 break 2
             fi
             if [ "$STATE" = "error" ]; then
@@ -243,12 +276,19 @@ EOJSON
                 curl -sk https://localhost:9443/v1/bootstrap 2>&1 | tee -a "$LOG_FILE"
                 break
             fi
+            # Continue polling for unknown/empty/idle states
             sleep 5
         done
 
         log "Retrying in $${retry_delay}s..."
         sleep $retry_delay
     done
+
+    if [ "$JOIN_COMPLETED" != "true" ]; then
+        log "ERROR: Failed to join cluster after $max_retries attempts!"
+        curl -sk https://localhost:9443/v1/bootstrap 2>&1 | tee -a "$LOG_FILE"
+        exit 1
+    fi
 fi
 
 # =============================================================================

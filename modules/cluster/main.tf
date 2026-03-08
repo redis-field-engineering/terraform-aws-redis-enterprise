@@ -34,10 +34,11 @@ data "aws_ami" "ubuntu" {
 locals {
   ami_id = var.ami_id != "" ? var.ami_id : data.aws_ami.ubuntu[0].id
 
-  # Distribute nodes across availability zones
+  # Distribute nodes across availability zones (only if rack_aware is true)
+  # When rack_aware is false, all nodes go to the first AZ for minimal latency
   node_azs = [
     for i in range(var.cluster_size) :
-    var.availability_zones[i % length(var.availability_zones)]
+    var.rack_aware ? var.availability_zones[i % length(var.availability_zones)] : var.availability_zones[0]
   ]
 
   # Map AZ to subnet ID
