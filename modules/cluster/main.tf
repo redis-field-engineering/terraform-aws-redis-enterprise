@@ -102,6 +102,18 @@ resource "aws_iam_instance_profile" "redis" {
 }
 
 # -----------------------------------------------------------------------------
+# Placement Group (for low-latency deployments)
+# -----------------------------------------------------------------------------
+
+resource "aws_placement_group" "cluster" {
+  count    = var.placement_group_strategy != "none" ? 1 : 0
+  name     = "${var.name}-placement"
+  strategy = var.placement_group_strategy
+
+  tags = var.tags
+}
+
+# -----------------------------------------------------------------------------
 # Key Pair
 # -----------------------------------------------------------------------------
 
@@ -123,6 +135,7 @@ resource "aws_instance" "master" {
   subnet_id              = local.az_to_subnet[local.node_azs[0]]
   vpc_security_group_ids = [var.security_group_id]
   iam_instance_profile   = aws_iam_instance_profile.redis.name
+  placement_group        = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].id : null
 
   associate_public_ip_address = !var.private_cluster
 
@@ -173,6 +186,7 @@ resource "aws_instance" "workers" {
   subnet_id              = local.az_to_subnet[local.node_azs[count.index + 1]]
   vpc_security_group_ids = [var.security_group_id]
   iam_instance_profile   = aws_iam_instance_profile.redis.name
+  placement_group        = var.placement_group_strategy != "none" ? aws_placement_group.cluster[0].id : null
 
   associate_public_ip_address = !var.private_cluster
 

@@ -127,3 +127,23 @@ output "redis_download_url" {
   value       = local.redis_download_url
 }
 
+# -----------------------------------------------------------------------------
+# Placement Group Information
+# -----------------------------------------------------------------------------
+
+output "placement_group_names" {
+  description = "Placement group names for each region (null if placement_group_strategy is 'none')."
+  value = {
+    for region, cluster in module.cluster :
+    region => cluster.placement_group_name
+  }
+}
+
+output "placement_group_ids" {
+  description = "Placement group IDs for each region (null if placement_group_strategy is 'none')."
+  value = {
+    for region, cluster in module.cluster :
+    region => cluster.placement_group_id
+  }
+}
+

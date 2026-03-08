@@ -115,3 +115,23 @@ variable "tags" {
   default     = {}
 }
 
+variable "placement_group_strategy" {
+  description = <<-EOT
+    Placement group strategy for cluster nodes. Options:
+    - "none": No placement group (default)
+    - "cluster": All nodes on same rack for lowest latency (~0.1ms)
+    - "spread": Each node on different hardware for max fault tolerance
+    - "partition": Nodes distributed across partitions
+
+    Note: "cluster" strategy provides lowest network latency but reduces
+    fault tolerance (all nodes affected by single rack failure).
+  EOT
+  type        = string
+  default     = "none"
+
+  validation {
+    condition     = contains(["none", "cluster", "spread", "partition"], var.placement_group_strategy)
+    error_message = "placement_group_strategy must be one of: none, cluster, spread, partition"
+  }
+}
+
