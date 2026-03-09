@@ -103,6 +103,13 @@ variable "cluster_fqdn" {
   type        = string
 }
 
+variable "redis_license" {
+  description = "Redis Enterprise license string. If provided, the license will be automatically applied to the cluster after creation."
+  type        = string
+  default     = ""
+  sensitive   = true
+}
+
 variable "wait_for_cluster" {
   description = "Wait for cluster initialization."
   type        = bool
