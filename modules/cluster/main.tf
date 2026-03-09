@@ -167,6 +167,7 @@ resource "aws_instance" "master" {
     redis_download_url   = var.redis_download_url
     redis_admin_user     = var.redis_admin_user
     redis_admin_password = var.redis_admin_password
+    redis_license        = var.redis_license
     cluster_fqdn         = var.cluster_fqdn
     flash_enabled        = var.flash_enabled
     node_index           = 0
@@ -218,6 +219,7 @@ resource "aws_instance" "workers" {
     redis_download_url   = var.redis_download_url
     redis_admin_user     = var.redis_admin_user
     redis_admin_password = var.redis_admin_password
+    redis_license        = var.redis_license
     cluster_fqdn         = var.cluster_fqdn
     flash_enabled        = var.flash_enabled
     node_index           = count.index + 1

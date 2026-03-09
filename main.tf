@@ -79,6 +79,7 @@ module "cluster" {
   redis_download_url   = local.redis_download_url
   redis_admin_user     = var.redis_admin_user
   redis_admin_password = local.redis_admin_password
+  redis_license        = var.redis_license
   cluster_fqdn         = local.is_active_active ? local.region_cluster_fqdns[each.key] : local.cluster_fqdn
   wait_for_cluster     = var.wait_for_cluster
 

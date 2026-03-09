@@ -50,6 +50,13 @@ variable "redis_download_url" {
   default     = ""
 }
 
+variable "redis_license" {
+  description = "Redis Enterprise license string. If provided, the license will be automatically applied to the cluster after creation."
+  type        = string
+  default     = ""
+  sensitive   = true
+}
+
 # -----------------------------------------------------------------------------
 # SSH Configuration
 # -----------------------------------------------------------------------------

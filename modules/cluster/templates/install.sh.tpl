@@ -18,6 +18,7 @@ NODE_INDEX="${node_index}"
 IS_MASTER="${is_master}"
 MASTER_IP="${master_ip}"
 RACK_ID="${rack_id}"
+REDIS_LICENSE="${redis_license}"
 
 LOG_FILE="/home/$${SSH_USER}/install_redis.log"
 INSTALL_DIR="/home/$${SSH_USER}/install"
@@ -215,6 +216,24 @@ EOJSON
         log "ERROR: Cluster creation timed out after 5 minutes!"
         curl -sk https://localhost:9443/v1/bootstrap 2>&1 | tee -a "$LOG_FILE"
         exit 1
+    fi
+
+    # Apply license if provided
+    if [ -n "$${REDIS_LICENSE}" ]; then
+        log "Applying Redis Enterprise license..."
+        LICENSE_RESPONSE=$(curl -sk -X PUT \
+            -u "$${REDIS_ADMIN_USER}:$${REDIS_ADMIN_PASSWORD}" \
+            -H "Content-Type: application/json" \
+            -d "{\"license\": \"$${REDIS_LICENSE}\"}" \
+            https://localhost:9443/v1/license 2>&1)
+
+        # Check if license was applied successfully
+        if echo "$LICENSE_RESPONSE" | grep -q '"shards_limit"'; then
+            log "License applied successfully"
+            log "License details: $LICENSE_RESPONSE"
+        else
+            log "WARNING: License application may have failed: $LICENSE_RESPONSE"
+        fi
     fi
 else
     log "Joining cluster at $${MASTER_IP} via REST API"
